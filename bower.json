@@ -1,0 +1,21 @@
+{
+  "name": "galactic-calc-2",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Brandon Kudo <brandonkudo@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "moment": "^2.19.2"
+  }
+}
