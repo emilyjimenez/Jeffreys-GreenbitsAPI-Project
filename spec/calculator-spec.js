@@ -1,8 +1,8 @@
-var Calculator = require('./../js/calc.js').calculatorModule;
+import { Years } from './../js/calc.js';
 
-describe('Calculator', function() {
-  it('should return the word ping if a 3', function() {
-    var testCalculator = new Calculator(1)
-    expect(testCalculator.pingPong(1)).toEqual("ping")
+describe('Years', function() {
+  var testAge = new Years(1)
+  it('should return a persons age in seconds', function() {
+    expect(testAge.yearsToSeconds(1)).toEqual(31536000);
   });
 });
