@@ -9,6 +9,7 @@ var lib = require('bower-files')();
 var browserSync = require('browser-sync').create();
 var buildProduction = utilities.env.production;
 var jshint = require('gulp-jshint');
+var watchify = require('watchify');
 
 
 
