@@ -1,17 +1,17 @@
 import { Years } from './../js/calc.js';
 
 describe('Years', function() {
-  let testAge = new Years();
-  let testDate = new Date(2014, 11, 24);
+  const testAge = new Years();
+  const testDate = new Date(2014, 11, 24);
 
   it('should return a persons age', function() {
-    expect(Math.round(testAge.ageCalculator(testDate))).toEqual(3);
+    expect(Math.floor(testAge.ageCalculator(testDate))).toEqual(2);
   });
 
-  // it('should return a persons age in seconds', function() {
-  //   expect(testAge.yearsToSeconds(1)).toEqual(31536000);
-  // });
-  //
+  it('should return a persons age in seconds', function() {
+    expect(testAge.yearsToSeconds(testDate)).toEqual(94608000);
+  });
+
   // it('should return a persons age in mars years', function() {
   //   expect(testAge.mercuryAge(1)).toEqual(.24);
   // });
