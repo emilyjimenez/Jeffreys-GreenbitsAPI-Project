@@ -1,11 +1,11 @@
 import { Years } from './../js/calc.js';
 
 describe('Years', function() {
-  let testAge = new Years(1)
+  let testAge = new Years();
   let testDate = new Date(2014, 11, 24);
 
   it('should return a persons age', function() {
-    expect(testAge.ageCalculator(testDate)).toEqual(3)
+    expect(Math.round(testAge.ageCalculator(testDate))).toEqual(3);
   });
 
   // it('should return a persons age in seconds', function() {
