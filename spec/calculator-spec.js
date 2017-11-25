@@ -3,13 +3,14 @@ import { Years } from './../js/calc.js';
 describe('Years', function() {
   const testAge = new Years();
   const testDate = new Date(2014, 11, 24);
+  let testAgeYears = testAge.ageCalculator(testDate) * 31536000;
 
   it('should return a persons age', function() {
     expect(Math.floor(testAge.ageCalculator(testDate))).toEqual(2);
   });
 
   it('should return a persons age in seconds', function() {
-    expect(testAge.yearsToSeconds(testDate)).toEqual(94608000);
+    expect(Math.round(testAge.yearsToSeconds(testDate))).toEqual(Math.round(testAgeYears));
   });
 
   // it('should return a persons age in mars years', function() {
