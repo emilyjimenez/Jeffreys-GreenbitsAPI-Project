@@ -16,16 +16,16 @@ describe('Years', function() {
   it('should return a persons age in mars years', function() {
     expect(Math.round(testAge.mercuryAge(testDate))).toEqual(Math.round(testAgeYears * .24));
   });
-  //
-  // it('should return a persons age in venus years', function() {
-  //   expect(testAge.venusAge(1)).toEqual(.62);
-  // });
-  //
-  // it('should return a persons age in mars years', function() {
-  //   expect(testAge.marsAge(1)).toEqual(1.88);
-  // });
-  //
-  // it('should return a persons age in jupiter years', function() {
-  //   expect(testAge.jupiterAge(1)).toEqual(11.86);
-  // });
+
+  it('should return a persons age in venus years', function() {
+    expect(Math.round(testAge.venusAge(testDate))).toEqual(Math.round(testAgeYears * .62));
+  });
+
+  it('should return a persons age in mars years', function() {
+    expect(Math.round(testAge.marsAge(testDate))).toEqual(Math.round(testAgeYears * 1.88));
+  });
+
+  it('should return a persons age in jupiter years', function() {
+    expect(Math.round(testAge.jupiterAge(testDate))).toEqual(Math.round(testAgeYears * 11.86));
+  });
 });

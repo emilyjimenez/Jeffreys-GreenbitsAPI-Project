@@ -21,15 +21,15 @@ export class Years {
     return this.ageCalculator(date) * .24;
   }
 
-  venusAge(age) {
+  venusAge(date) {
     return this.ageCalculator(date) * .62;
   }
 
-  marsAge(age) {
+  marsAge(date) {
     return this.ageCalculator(date) * 1.88;
   }
 
-  jupiterAge(age) {
+  jupiterAge(date) {
     return this.ageCalculator(date) * 11.86;
   }
 }
