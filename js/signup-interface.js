@@ -1,10 +1,23 @@
-$(document).ready(function(){
-  $('#time').text(moment());
+import { Years } from "./../js/calc.js";
 
-  $('#signup').submit(function(event){
+$(document).ready(function() {
+  $("#output").hide();
+  $('#form').submit(function(event) {
     event.preventDefault();
-    var email = $('#email').val();
-    $('#signup').hide();
-    $('#solution').prepend('<p>Thank you, ' + email + ' has been added to our list!</p>');
+    let input = $('#birthday').val();
+    let years = new Years();
+
+    let age = years.ageCalculator(input);
+    let ageInSeconds = years.yearsToSeconds(input);
+    let ageOnMercury = years.mercuryAge(input);
+    let ageOnVenus = years.venusAge(input);
+    let ageOnMars = years.marsAge(input);
+    let ageOnJupiter = years.jupiterAge(input);
+
+    $("#output").show();
+    $("#age-output").text("You are " + age + " years old.");
+
+
   });
+
 });
