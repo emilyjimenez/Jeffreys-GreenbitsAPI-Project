@@ -15,9 +15,12 @@ $(document).ready(function() {
     let ageOnJupiter = years.jupiterAge(input);
 
     $("#output").show();
-    $("#age-output").text("You are " + age + " years old.");
-
-
+    $("#age-output").text(`You are ${age} years old`);
+    $("#seconds-output").text(`You are ${ageInSeconds} seconds old`);
+    $("#mercury-age-output").text(`You are ${ageOnMercury} years old on Mercury`);
+    $("#venus-age-output").text(`You are ${ageOnVenus} years old on Venus`);
+    $("#mars-age-output").text(`You are ${ageOnMars} years old on Mars`);
+    $("#jupiter-age-output").text(`You are ${ageOnJupiter} years old on Jupiter`);
   });
 
 });

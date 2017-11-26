@@ -12,7 +12,7 @@ export class Years {
     let todayInSeconds = today.getTime()/1000;
     let birthdayInSeconds = birthday.getTime()/1000;
     let ageInSeconds = todayInSeconds - birthdayInSeconds;
-    let ageInYears = Math.floor(ageInSeconds / 31536000);
+    let ageInYears = ageInSeconds / 31536000;
     return ageInYears;
   }
 
@@ -38,25 +38,25 @@ export class Years {
 
   mercuryLifeExpectancy(date) {
     const averageLife = 79;
-    let yearsLeft = Math.floor(averageLife * .24) - mercuryAge(date);
+    let yearsLeft = (averageLife * .24) - this.mercuryAge(date);
     return yearsLeft;
   }
 
   venusLifeExpectancy(date) {
     const averageLife = 79;
-    let yearsLeft = Math.floor(averageLife * .62) - venusAge(date);
+    let yearsLeft = (averageLife * .62) - venusAge(date);
     return yearsLeft;
   }
 
   marsLifeExpectancy(date) {
     const averageLife = 79;
-    let yearsLeft = Math.floor(averageLife * .24) - marsAge(date);
+    let yearsLeft = (averageLife * .24) - marsAge(date);
     return yearsLeft;
   }
 
   jupiterLifeExpectancy(date) {
     const averageLife = 79;
-    let yearsLeft = Math.floor(averageLife * .24) - jupiterAge(date);
+    let yearsLeft = (averageLife * .24) - jupiterAge(date);
     return yearsLeft;
   }
 }

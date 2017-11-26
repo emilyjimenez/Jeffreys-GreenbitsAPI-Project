@@ -28,4 +28,8 @@ describe('Years', function() {
   it('should return a persons age in jupiter years', function() {
     expect(Math.round(testAge.jupiterAge(testDate))).toEqual(Math.round(testAgeYears * 11.86));
   });
+
+  it('should return how many years a person has left on mercury', function() {
+    expect(Math.round(testAge.mercuryLifeExpectancy(testDate))).toEqual(Math.round((79 * .24) - testAge.mercuryAge(testDate)));
+  });
 });
