@@ -12,7 +12,7 @@ export class Years {
     let todayInSeconds = today.getTime()/1000;
     let birthdayInSeconds = birthday.getTime()/1000;
     let ageInSeconds = todayInSeconds - birthdayInSeconds;
-    let ageInYears = ageInSeconds / 31536000;
+    let ageInYears = Math.floor(ageInSeconds / 31536000);
     return ageInYears;
   }
 
