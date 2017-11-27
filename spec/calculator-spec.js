@@ -30,8 +30,12 @@ describe('Years', function() {
     expect(Math.round(testAge.jupiterAge(testDate))).toEqual(Math.round(testAgeYears * 11.86));
   });
 
+// `You have ${yearsLeft} years left on Mercury`
+// Math.round((79 * .24) - testAge.mercuryAge(testDate))
+
+
   it('should return how many years a person has left on mercury', function() {
-    expect(Math.round(testAge.mercuryLifeExpectancy(testDate))).toEqual(Math.round((79 * .24) - testAge.mercuryAge(testDate)));
+    expect(testAge.mercuryLifeExpectancy(testDate)).toEqual(`You have ${(79 * .24) - testAge.mercuryAge(testDate)} years left on Mercury`);
   });
 
   it('should return a message stating that they have surpassed the average life expectancy on mercury', function() {
@@ -39,7 +43,7 @@ describe('Years', function() {
   });
 
   it('should return how many years a person has left on venus', function() {
-    expect(Math.round(testAge.venusLifeExpectancy(testDate))).toEqual(Math.round((79 * .62) - testAge.venusAge(testDate)));
+    expect(testAge.venusLifeExpectancy(testDate)).toEqual(`You have ${(79 * .62) - testAge.venusAge(testDate)} years left on Venus`);
   });
 
   it('should return a message stating that they have surpassed the average life expectancy on venus', function() {
@@ -47,7 +51,7 @@ describe('Years', function() {
   });
 
   it('should return how many years a person has left on mars', function() {
-    expect(Math.round(testAge.marsLifeExpectancy(testDate))).toEqual(Math.round((79 * 1.88) - testAge.marsAge(testDate)));
+    expect(testAge.marsLifeExpectancy(testDate)).toEqual(`You have ${(79 * 1.88) - testAge.marsAge(testDate)} years left on Mars`);
   });
 
   it('should return a message stating that they have surpassed the average life expectancy on mars', function() {
@@ -55,7 +59,7 @@ describe('Years', function() {
   });
 
   it('should return how many years a person has left on jupiter', function() {
-    expect(Math.round(testAge.jupiterLifeExpectancy(testDate))).toEqual(Math.round((79 * 11.86) - testAge.jupiterAge(testDate)));
+    expect(testAge.jupiterLifeExpectancy(testDate)).toEqual(`You have ${(79 * 11.86) - testAge.jupiterAge(testDate)} years left on Jupiter`);
   });
 
   it('should return a message stating that they have surpassed the average life expectancy on jupiter', function() {
