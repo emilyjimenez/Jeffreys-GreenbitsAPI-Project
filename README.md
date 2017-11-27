@@ -1,4 +1,4 @@
-# Pizza Ordering Website
+# Super Galactic Age Calculator
 
 #### A website that allows users to enter their birthday and the website will send them back a list of how old they would be and how long they had to live on other planets. 11/26/17
 
