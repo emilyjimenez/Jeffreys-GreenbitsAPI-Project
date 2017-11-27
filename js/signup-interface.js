@@ -14,6 +14,11 @@ $(document).ready(function() {
     let ageOnMars = years.marsAge(input);
     let ageOnJupiter = years.jupiterAge(input);
 
+    let expectancyOnMercury = years.mercuryLifeExpectancy(input);
+    let expectancyOnVenus = years.venusLifeExpectancy(input);
+    let expectancyOnMars = years.marsLifeExpectancy(input);
+    let expectancyOnJupiter = years.jupiterLifeExpectancy(input);
+
     $("#output").show();
     $("#age-output").text(`You are ${age} years old`);
     $("#seconds-output").text(`You are ${ageInSeconds} seconds old`);
@@ -21,6 +26,10 @@ $(document).ready(function() {
     $("#venus-age-output").text(`You are ${ageOnVenus} years old on Venus`);
     $("#mars-age-output").text(`You are ${ageOnMars} years old on Mars`);
     $("#jupiter-age-output").text(`You are ${ageOnJupiter} years old on Jupiter`);
+    $("#mercury-expectancy-output").text(expectancyOnMercury);
+    $("#venus-expectancy-output").text(expectancyOnVenus);
+    $("#mars-expectancy-output").text(expectancyOnMars);
+    $("#jupiter-expectancy-output").text(expectancyOnJupiter);
   });
 
 });

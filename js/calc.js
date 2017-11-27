@@ -42,7 +42,7 @@ export class Years {
     if(yearsLeft < 0) {
       return("You have surpassed the average life expectancy on Mercury");
     } else {
-    return yearsLeft;
+    return (`You have ${yearsLeft} years left on Mercury`);
     }
   }
 
@@ -52,7 +52,7 @@ export class Years {
     if(yearsLeft < 0) {
       return("You have surpassed the average life expectancy on Venus");
     } else {
-    return yearsLeft;
+    return (`You have ${yearsLeft} years left on Venus`);
     }
   }
 
@@ -62,7 +62,7 @@ export class Years {
     if(yearsLeft < 0) {
       return("You have surpassed the average life expectancy on Mars");
     } else {
-    return yearsLeft;
+    return (`You have ${yearsLeft} years left on Mars`);
     }
   }
 
@@ -72,7 +72,7 @@ export class Years {
     if(yearsLeft < 0) {
       return("You have surpassed the average life expectancy on Jupiter");
     } else {
-    return yearsLeft;
+    return (`You have ${yearsLeft} years left on Jupiter`);
     }
   }
 }
