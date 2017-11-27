@@ -39,24 +39,40 @@ export class Years {
   mercuryLifeExpectancy(date) {
     const averageLife = 79;
     let yearsLeft = (averageLife * .24) - this.mercuryAge(date);
+    if(yearsLeft < 0) {
+      return("You have surpassed the average life expectancy on Mercury");
+    } else {
     return yearsLeft;
+    }
   }
 
   venusLifeExpectancy(date) {
     const averageLife = 79;
-    let yearsLeft = (averageLife * .62) - venusAge(date);
+    let yearsLeft = (averageLife * .62) - this.venusAge(date);
+    if(yearsLeft < 0) {
+      return("You have surpassed the average life expectancy on Venus");
+    } else {
     return yearsLeft;
+    }
   }
 
   marsLifeExpectancy(date) {
     const averageLife = 79;
-    let yearsLeft = (averageLife * .24) - marsAge(date);
+    let yearsLeft = (averageLife * 1.88) - this.marsAge(date);
+    if(yearsLeft < 0) {
+      return("You have surpassed the average life expectancy on Mars");
+    } else {
     return yearsLeft;
+    }
   }
 
   jupiterLifeExpectancy(date) {
     const averageLife = 79;
-    let yearsLeft = (averageLife * .24) - jupiterAge(date);
+    let yearsLeft = (averageLife * 11.86) - this.jupiterAge(date);
+    if(yearsLeft < 0) {
+      return("You have surpassed the average life expectancy on Jupiter");
+    } else {
     return yearsLeft;
+    }
   }
 }

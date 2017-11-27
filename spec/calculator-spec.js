@@ -3,6 +3,7 @@ import { Years } from './../js/calc.js';
 describe('Years', function() {
   const testAge = new Years();
   const testDate = new Date(2014, 11, 24);
+  const surpassDate = new Date(1917, 11, 24);
   let testAgeYears = testAge.ageCalculator(testDate);
 
   it('should return a persons age', function() {
@@ -31,5 +32,33 @@ describe('Years', function() {
 
   it('should return how many years a person has left on mercury', function() {
     expect(Math.round(testAge.mercuryLifeExpectancy(testDate))).toEqual(Math.round((79 * .24) - testAge.mercuryAge(testDate)));
+  });
+
+  it('should return a message stating that they have surpassed the average life expectancy on mercury', function() {
+    expect(testAge.mercuryLifeExpectancy(surpassDate)).toEqual("You have surpassed the average life expectancy on Mercury");
+  });
+
+  it('should return how many years a person has left on venus', function() {
+    expect(Math.round(testAge.venusLifeExpectancy(testDate))).toEqual(Math.round((79 * .62) - testAge.venusAge(testDate)));
+  });
+
+  it('should return a message stating that they have surpassed the average life expectancy on venus', function() {
+    expect(testAge.venusLifeExpectancy(surpassDate)).toEqual("You have surpassed the average life expectancy on Venus");
+  });
+
+  it('should return how many years a person has left on mars', function() {
+    expect(Math.round(testAge.marsLifeExpectancy(testDate))).toEqual(Math.round((79 * 1.88) - testAge.marsAge(testDate)));
+  });
+
+  it('should return a message stating that they have surpassed the average life expectancy on mars', function() {
+    expect(testAge.marsLifeExpectancy(surpassDate)).toEqual("You have surpassed the average life expectancy on Mars");
+  });
+
+  it('should return how many years a person has left on jupiter', function() {
+    expect(Math.round(testAge.jupiterLifeExpectancy(testDate))).toEqual(Math.round((79 * 11.86) - testAge.jupiterAge(testDate)));
+  });
+
+  it('should return a message stating that they have surpassed the average life expectancy on jupiter', function() {
+    expect(testAge.jupiterLifeExpectancy(surpassDate)).toEqual("You have surpassed the average life expectancy on Jupiter");
   });
 });
