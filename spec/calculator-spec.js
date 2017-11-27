@@ -30,10 +30,6 @@ describe('Years', function() {
     expect(Math.round(testAge.jupiterAge(testDate))).toEqual(Math.round(testAgeYears * 11.86));
   });
 
-// `You have ${yearsLeft} years left on Mercury`
-// Math.round((79 * .24) - testAge.mercuryAge(testDate))
-
-
   it('should return how many years a person has left on mercury', function() {
     expect(testAge.mercuryLifeExpectancy(testDate)).toEqual(`You have ${(79 * .24) - testAge.mercuryAge(testDate)} years left on Mercury`);
   });
