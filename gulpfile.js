@@ -81,5 +81,10 @@ gulp.task('serve', function() {
 
   gulp.watch(['js/*.js'], ['jsBuild']);
   gulp.watch(['bower.json'], ['bowerBuild']);
+  gulp.watch(['index.html'], ['watch']);
+  gulp.watch(['css/master.css'], ['watch']);
+});
 
+gulp.task('watch', function(){
+  browserSync.reload();
 });
