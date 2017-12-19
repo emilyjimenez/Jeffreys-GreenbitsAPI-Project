@@ -2,26 +2,25 @@ import { authorizationToken } from './../.env';
 
 export class Lookup {
   constructor() {
-
   }
 
-  let getProductData = function(response, error) {
+  getProductData(response, displayProductData, error) {
     $.ajax({
-      url: `https://api.greenbits.com/api/v1/products?by_active=true&flower_type=0&product_type_id=${response}`,
+      url: `https://api.greenbits.com/api/v1/products?by_active=true&product_type_id=${response}`,
       headers: {
-        `Authorization`: `Token token=${authorizationToken},`
+        'Authorization': authorizationToken,
       },
-      type: `GET`,
+      type: 'GET',
       data: {
-        format: `json`
+        format: 'json'
       },
       success: function(response) {
 
-      diplayProductData(response);
+      displayProductData(response);
 
       },
       error: function() {
-        alert("FAIL WHALE");
+        alert('FAIL WHALE');
       }
     });
   }

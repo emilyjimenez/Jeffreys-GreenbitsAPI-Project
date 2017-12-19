@@ -1,12 +1,20 @@
-import { Lookup } from './../lookup.js';
+import { Lookup } from './../js/lookup.js';
 
-let displayProductData = function(response) {
-  console.log(JSON.stringify(response));
-}
+//Call back is not singling our the flowers and is making me angry
+
+// let displayProductData = function(response) {
+//   if (response.products.length > 0) {
+//     for (let i = 0; i < response.products.length; i++) {
+//       let index = response.products[i];
+//       let name = index.name;
+//       console.log(name);
+//     }
+//   }
+// };
 
 let error = function(error) {
   alert("U FAIL");
-}
+};
 
 
 $(document).ready(function() {
