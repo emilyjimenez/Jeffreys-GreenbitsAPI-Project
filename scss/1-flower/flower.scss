@@ -41,19 +41,19 @@
   font-family: 'Gotham Book';
 }
 
-.list-item-odd {
-  display: flex;
-  width: 45%;
-  // border-left: 1px solid $sativa;
-  // border-bottom: 1px solid $sativa;
-  // background-color: rgba(209, 72, 47, 0.3);
-  background-color: rgba(255,255,255,0.5);
-  padding-bottom: 3px;
-  padding-top: 3px;
-  margin-bottom: 2px;
-}
+// .list-item-odd {
+//   display: flex;
+//   width: 45%;
+//   // border-left: 1px solid $sativa;
+//   // border-bottom: 1px solid $sativa;
+//   // background-color: rgba(209, 72, 47, 0.3);
+//   background-color: rgba(255,255,255,0.5);
+//   padding-bottom: 3px;
+//   padding-top: 3px;
+//   margin-bottom: 2px;
+// }
 
-.list-item-even {
+.list-item {
   display: flex;
   width: 45%;
   // border-left: 1px solid $indica;
@@ -64,18 +64,18 @@
   padding-top: 3px;
   margin-bottom: 2px;
 }
-
-.list-item-hybrid {
-  display: flex;
-  width: 45%;
-  // border-left: 1px solid $indica;
-  // border-bottom: 1px solid $indica;
-  // background-color: rgba(121, 186, 48, 0.3);
-  background-color: rgba(255,255,255,0.5);
-  padding-bottom: 3px;
-  padding-top: 3px;
-  margin-bottom: 2px;
-}
+//
+// .list-item-hybrid {
+//   display: flex;
+//   width: 45%;
+//   // border-left: 1px solid $indica;
+//   // border-bottom: 1px solid $indica;
+//   // background-color: rgba(121, 186, 48, 0.3);
+//   background-color: rgba(255,255,255,0.5);
+//   padding-bottom: 3px;
+//   padding-top: 3px;
+//   margin-bottom: 2px;
+// }
 
 .types {
   width: 40%;
