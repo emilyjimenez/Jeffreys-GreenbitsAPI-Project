@@ -29,7 +29,8 @@
 .categories {
   display: flex;
   width: 45%;
-  background-color: rebeccapurple; }
+  background-color: rebeccapurple;
+  padding: 1%; }
 
 .content {
   display: flex;
@@ -38,7 +39,8 @@
   align-items: center; }
 
 .list-item {
-  display: flex; }
+  display: flex;
+  width: 45%; }
 
 .brand, .strain {
   width: 25%;

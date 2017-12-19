@@ -41,6 +41,7 @@
   width: 45%;
   // justify-content: space-around;
   background-color: rebeccapurple;
+  padding: 1%;
 }
 
 .content {
@@ -52,6 +53,8 @@
 
 .list-item {
   display: flex;
+  width: 45%;
+  
 }
 
 .brand, .strain {
