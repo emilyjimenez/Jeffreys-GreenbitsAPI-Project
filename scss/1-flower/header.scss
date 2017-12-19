@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 110px;
+  width: 100%;
+  padding: 10px;
+  .logo {
+    height: 100%;
+    #circle-logo {
+      width: 80px;
+      filter: invert(100%);
+    }
+  }
+  .menu-title {
+    h1 {
+      color: white;
+      font-size: 50px;
+      font-family: 'Gotham Black';
+      text-transform: uppercase;
+    }
+  }
+  .legend {
+    background-color: rgba(255,255,255,0.5);
+    padding: 5px;
+    display: flex;
+    width: 150px;
+    justify-content: space-around;
+  }
+  .legend-indica {
+    @include icon($indica, 30px, 18px)
+  }
+  .legend-sativa {
+    @include icon($sativa, 30px, 18px)
+  }
+  .legend-hybrid {
+    @include icon($hybrid, 30px, 18px)
+  }
+}
