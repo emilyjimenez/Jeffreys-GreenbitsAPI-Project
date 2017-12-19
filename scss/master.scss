@@ -1,5 +1,7 @@
-@import '1-flower/flower';
+@import 'fonts';
 @import '2-abstracts/variables';
+@import '1-flower/flower';
+@import '1-flower/header';
 
 * {
   margin: 0;
@@ -14,11 +16,12 @@
 body {
   background-image: url("../img/wood.jpg");
   background-size: cover;
+  // font-family: 'Gotham Black';
 }
 
-.container {
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  // background-color: $hybrid;
-}
+// .container {
+//   height: 100vh;
+//   width: 100vw;
+//   background-size: cover;
+//   // background-color: $hybrid;
+// }
