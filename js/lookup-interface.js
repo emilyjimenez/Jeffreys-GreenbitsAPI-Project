@@ -4,13 +4,29 @@ import { Lookup } from './../js/lookup.js';
 
 let displayFlowerData = function(response) {
   if (response.products.length > 0) {
-    console.log(response);
     for (let i = 0; i < response.products.length; i++) {
       let index = response.products[i];
       let name = index.name;
       let flowerType = index.flower_type;
+      let thc = index.test_results_thc;
+      let cbd = index.test_results_cbd;
+      let price = index.sell_price;
       if (flowerType === 0) {
         console.log("these are indica: " + name);
+
+
+        $(".content").append(`<div class="list-item">
+                                <div class="types">
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="numbers">
+                                  <p class="thc">thc</p>
+                                  <p class="cbd">cbd</p>
+                                  <p class="price">price</p>
+                                </div>
+                              </div>
+
+        `)
       } else if (flowerType === 1) {
         console.log("these are sativa: " + name);
       } else if (flowerType === 2) {
@@ -24,12 +40,12 @@ let displayFlowerData = function(response) {
   }
 };
 
-let displayPrerollData = function(response) {
-  if (response.products.length > 0) {
-    console.log(response);
-  }
-}
-
+// let displayPrerollData = function(response) {
+//   if (response.products.length > 0) {
+//     console.log(response);
+//   }
+// }
+//
 let error = function(error) {
   alert("U FAIL");
 };
@@ -41,9 +57,9 @@ $(document).ready(function() {
   $("#check-flower").click(function() {
     flowerLookup.getFlowerData(flowerID, displayFlowerData, error);
   });
-  let prerollLookup = new Lookup();
-  let prerollID = "01ccfc60-ab96-4614-bfb8-8dea907e96f0"
-  $("#check-preroll").click(function() {
-    prerollLookup.getPrerollData(prerollID, displayPrerollData, error);
-  })
+  // let prerollLookup = new Lookup();
+  // let prerollID = "01ccfc60-ab96-4614-bfb8-8dea907e96f0"
+  // $("#check-preroll").click(function() {
+  //   prerollLookup.getPrerollData(prerollID, displayPrerollData, error);
+  // })
 });
