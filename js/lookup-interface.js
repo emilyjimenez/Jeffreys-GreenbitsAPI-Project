@@ -1,6 +1,6 @@
 import { Lookup } from './../js/lookup.js';
 
-//Call back is not singling our the flowers and is making me angry
+//Call back is not singling our flowers and is making me angry
 
 let displayProductData = function(response) {
   if (response.products.length > 0) {
