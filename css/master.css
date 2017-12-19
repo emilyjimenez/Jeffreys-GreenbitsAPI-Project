@@ -1,55 +1,140 @@
-.header {
+@font-face {
+  font-family: 'Gotham Black';
+  src: url("../fonts/Gotham-Black.otf") format("opentype"); }
+@font-face {
+  font-family: 'Gotham Book';
+  src: url("../fonts/Gotham-Book.otf") format("opentype"); }
+.container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+  flex-direction: column;
+  align-items: center; }
 
 .body {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 100%; }
-
-.large {
-  color: honeydew;
-  font-size: 50px; }
-
-.logo {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  filter: invert(100%);
-  z-index: -1; }
+  height: 850px;
+  width: 1800px;
+  padding: 10px; }
 
 .content-header {
   display: flex;
   justify-content: space-around;
   width: 100%; }
-
-.categories {
-  display: flex;
-  width: 45%;
-  background-color: rebeccapurple;
-  padding: 1%; }
+  .content-header .categories {
+    display: flex;
+    width: 45%;
+    background-color: black;
+    color: white;
+    font-family: 'Gotham Black';
+    align-items: center;
+    height: 30px;
+    margin-bottom: 15px; }
 
 .content {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center; }
+  align-items: center;
+  font-family: 'Gotham Book'; }
 
-.list-item {
+.list-item-odd {
   display: flex;
-  width: 45%; }
+  width: 45%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px; }
 
-.brand, .strain {
-  width: 25%;
-  background-color: yellow; }
+.list-item-even {
+  display: flex;
+  width: 45%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px; }
+
+.list-item-hybrid {
+  display: flex;
+  width: 45%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px; }
+
+.types {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .types p {
+    margin-left: 40px; }
 
 .numbers {
-  width: 50%;
+  width: 60%;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  align-items: center; }
+
+.brand {
+  align-self: flex-start; }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 110px;
+  width: 100%;
+  padding: 10px; }
+  .header .logo {
+    height: 100%; }
+    .header .logo #circle-logo {
+      width: 80px;
+      filter: invert(100%); }
+  .header .menu-title h1 {
+    color: white;
+    font-size: 50px;
+    font-family: 'Gotham Black';
+    text-transform: uppercase; }
+  .header .legend {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    display: flex;
+    width: 150px;
+    justify-content: space-around; }
+  .header .legend-indica {
+    background: #6c345d;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gotham Black';
+    text-shadow: 0 0 20px grey;
+    font-size: 18px; }
+  .header .legend-sativa {
+    background: #d1482f;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gotham Black';
+    text-shadow: 0 0 20px grey;
+    font-size: 18px; }
+  .header .legend-hybrid {
+    background: #79ba30;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gotham Black';
+    text-shadow: 0 0 20px grey;
+    font-size: 18px; }
 
 * {
   margin: 0;
@@ -61,11 +146,6 @@
 
 body {
   background-image: url("../img/wood.jpg");
-  background-size: cover; }
-
-.container {
-  height: 100vh;
-  width: 100vw;
   background-size: cover; }
 
 /*# sourceMappingURL=master.css.map */

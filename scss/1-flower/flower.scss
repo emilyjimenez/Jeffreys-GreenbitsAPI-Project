@@ -1,69 +1,102 @@
-.header {
+.container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 .body {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background-color: rgba(255,255,255,0.5);
-  width: 100%;
-}
-
-.large {
-  color: honeydew;
-  font-size: 50px;
-}
-
-.footer {
-
-}
-
-.logo {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  filter: invert(100%);
-  z-index: -1;
-
+  height: 850px;
+  // background-color: rgba(255,255,255,0.5);
+  width: 1800px;
+  // border: 1px solid black;
+  padding: 10px;
 }
 
 .content-header {
   display: flex;
   justify-content: space-around;
   width: 100%;
+
+  .categories {
+    display: flex;
+    width: 45%;
+    background-color: black;
+    color: white;
+    font-family: 'Gotham Black';
+    align-items: center;
+    // padding: 15px;
+    height: 30px;
+    margin-bottom: 15px;
+  }
 }
 
-.categories {
-  display: flex;
-  width: 45%;
-  // justify-content: space-around;
-  background-color: rebeccapurple;
-  padding: 1%;
-}
 
 .content {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  font-family: 'Gotham Book';
 }
 
-.list-item {
+.list-item-odd {
   display: flex;
   width: 45%;
-  
+  // border-left: 1px solid $sativa;
+  // border-bottom: 1px solid $sativa;
+  // background-color: rgba(209, 72, 47, 0.3);
+  background-color: rgba(255,255,255,0.5);
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px;
 }
 
-.brand, .strain {
-  width: 25%;
-  background-color: yellow;
+.list-item-even {
+  display: flex;
+  width: 45%;
+  // border-left: 1px solid $indica;
+  // border-bottom: 1px solid $indica;
+  // background-color: rgba(108, 52, 93, 0.3);
+  background-color: rgba(255,255,255,0.5);
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px;
+}
+
+.list-item-hybrid {
+  display: flex;
+  width: 45%;
+  // border-left: 1px solid $indica;
+  // border-bottom: 1px solid $indica;
+  // background-color: rgba(121, 186, 48, 0.3);
+  background-color: rgba(255,255,255,0.5);
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px;
+}
+
+.types {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  p {
+    margin-left: 40px;
+  }
 }
 
 .numbers {
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+.brand {
+  align-self: flex-start;
+}
+.footer {
+
 }
