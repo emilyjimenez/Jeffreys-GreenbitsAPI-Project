@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%; }
+
+.large {
+  color: honeydew;
+  font-size: 50px; }
+
+.logo {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  filter: invert(100%);
+  z-index: -1; }
+
+.content-header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; }
+
+.categories {
+  display: flex;
+  width: 45%;
+  background-color: rebeccapurple;
+  padding: 1%; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.list-item {
+  display: flex;
+  width: 45%; }
+
+.brand, .strain {
+  width: 25%;
+  background-color: yellow; }
+
+.numbers {
+  width: 50%;
+  display: flex;
+  justify-content: space-around; }
+
+/*# sourceMappingURL=flower.css.map */
