@@ -13,8 +13,6 @@ let displayFlowerData = function(response) {
       let price = index.sell_price;
       if (flowerType === 0) {
         console.log("these are indica: " + name);
-
-
         $(".content").append(`<div class="list-item">
                                 <div class="types">
                                   <p class="brand">${name}</p>
@@ -26,15 +24,63 @@ let displayFlowerData = function(response) {
                                 </div>
                               </div>
 
-        `)
+        `);
       } else if (flowerType === 1) {
         console.log("these are sativa: " + name);
+        $(".content").append(`<div class="list-item">
+                                <div class="types">
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="numbers">
+                                  <p class="thc">thc</p>
+                                  <p class="cbd">cbd</p>
+                                  <p class="price">price</p>
+                                </div>
+                              </div>
+
+        `);
       } else if (flowerType === 2) {
         console.log("these are hybrid: " + name);
+        $(".content").append(`<div class="list-item">
+                                <div class="types">
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="numbers">
+                                  <p class="thc">thc</p>
+                                  <p class="cbd">cbd</p>
+                                  <p class="price">price</p>
+                                </div>
+                              </div>
+
+        `);
       } else if (flowerType === 3) {
         console.log("these are indica hybrid: " + name);
+        $(".content").append(`<div class="list-item">
+                                <div class="types">
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="numbers">
+                                  <p class="thc">thc</p>
+                                  <p class="cbd">cbd</p>
+                                  <p class="price">price</p>
+                                </div>
+                              </div>
+
+        `);
       } else {
         console.log("these are sativa hybrid: " + name);
+        $(".content").append(`<div class="list-item">
+                                <div class="types">
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="numbers">
+                                  <p class="thc">thc</p>
+                                  <p class="cbd">cbd</p>
+                                  <p class="price">price</p>
+                                </div>
+                              </div>
+
+        `);
       }
     }
   }
@@ -55,6 +101,8 @@ $(document).ready(function() {
   let flowerLookup = new Lookup();
   let flowerID = "87e148b0-c86f-4e8a-8089-0c5cd34dd3c1";
   $("#check-flower").click(function() {
+    $("#buttons").hide();
+    $("#flower-menu").show();
     flowerLookup.getFlowerData(flowerID, displayFlowerData, error);
   });
   // let prerollLookup = new Lookup();

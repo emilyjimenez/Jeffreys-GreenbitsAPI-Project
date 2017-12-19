@@ -3,6 +3,10 @@
 @import '1-flower/flower';
 @import '1-flower/header';
 
+#flower-menu{
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;

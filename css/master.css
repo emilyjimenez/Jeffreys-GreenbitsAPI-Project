@@ -37,23 +37,7 @@
   align-items: center;
   font-family: 'Gotham Book'; }
 
-.list-item-odd {
-  display: flex;
-  width: 45%;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding-bottom: 3px;
-  padding-top: 3px;
-  margin-bottom: 2px; }
-
-.list-item-even {
-  display: flex;
-  width: 45%;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding-bottom: 3px;
-  padding-top: 3px;
-  margin-bottom: 2px; }
-
-.list-item-hybrid {
+.list-item {
   display: flex;
   width: 45%;
   background-color: rgba(255, 255, 255, 0.5);
@@ -135,6 +119,9 @@
     font-family: 'Gotham Black';
     text-shadow: 0 0 20px grey;
     font-size: 18px; }
+
+#flower-menu {
+  display: none; }
 
 * {
   margin: 0;
