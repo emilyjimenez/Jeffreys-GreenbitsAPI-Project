@@ -264,4 +264,11 @@ $(document).ready(function() {
     cartridgeLookup.getCartridgeData(cartridgeID, displayCartridgeData, error);
     concentrateLookup.getConcentrateData(concentrateID, displayConcentrateData, error);
   });
+  $(".logo").click(function() {
+    $("#flower-menu").hide();
+    $(".content").empty();
+    $("#concentrate-menu").hide();
+    $(".con-content").empty();
+    $("#buttons").show();
+  });
 });
