@@ -3,17 +3,11 @@
 @import '1-flower/flower';
 @import '1-flower/header';
 @import '3-concentrate/concentrate';
+@import '4-welcome/welcome';
 
-#flower-menu{
+#flower-menu, #concentrate-menu {
   display: none;
 }
-
-#buttons {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-}
-
 * {
   margin: 0;
   padding: 0;
