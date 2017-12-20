@@ -4,6 +4,9 @@
 @font-face {
   font-family: 'Gotham Book';
   src: url("../fonts/Gotham-Book.otf") format("opentype"); }
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url("../fonts/Gotham-Medium.otf") format("opentype"); }
 .container {
   display: flex;
   flex-direction: column;
@@ -37,7 +40,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  font-family: 'Gotham Book'; }
+  font-family: 'Gotham Medium'; }
 
 .list-item {
   display: flex;
@@ -64,11 +67,6 @@
     width: 10px; }
   .numbers .thc, .numbers .cbd, .numbers .price {
     flex-grow: 1; }
-
-.footer {
-  width: 1800px;
-  height: 80px;
-  background-color: white; }
 
 .header {
   display: flex;
@@ -163,7 +161,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  font-family: 'Gotham Book'; }
+  font-family: 'Gotham Medium'; }
 
 .con-cartridges, .con-live-resins, .con-shatter, .con-wax, .con-rso, .con-oil {
   display: flex;
@@ -228,6 +226,19 @@
     cursor: pointer;
     transform: scale(1); }
 
+.footer {
+  width: 100%;
+  height: 50px; }
+  .footer p {
+    animation: marquee 2s linear 0s infinite;
+    color: white;
+    font-size: 20px; }
+
+@keyframes marquee {
+  0% {
+    right: 0; }
+  100% {
+    left: 0; } }
 #flower-menu, #concentrate-menu {
   display: none; }
 

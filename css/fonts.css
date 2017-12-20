@@ -4,5 +4,8 @@
 @font-face {
   font-family: 'Gotham Book';
   src: url("../fonts/Gotham-Book.otf") format("opentype"); }
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url("../fonts/Gotham-Medium.otf") format("opentype"); }
 
 /*# sourceMappingURL=fonts.css.map */

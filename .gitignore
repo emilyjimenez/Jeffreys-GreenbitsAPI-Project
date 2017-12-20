@@ -5,4 +5,3 @@ node_modules/
 .DS_Store
 .env
 .sass-cache/
-package-lock.json

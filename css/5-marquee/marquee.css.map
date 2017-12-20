@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAQ;EACN,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,SAAE;IACA,SAAS,EAAE,6BAA6B;IACxC,KAAK,EAAE,KAAK;IACZ,SAAS,EAAE,IAAI;;AAInB,kBASC;EARC,EAAG;IAED,KAAK,EAAE,CAAC;EAEV,IAAK;IACH,IAAI,EAAE,CAAC",
+"sources": ["../../scss/5-marquee/marquee.scss"],
+"names": [],
+"file": "marquee.css"
+}
