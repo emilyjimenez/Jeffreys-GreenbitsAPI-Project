@@ -92,6 +92,9 @@ let displayPrerollData = function(response) {
       let flowerType = index.flower_type;
       let thc = index.test_results_thc;
       let cbd = index.test_results_cbd;
+      let price = index.sell_price;
+      let vendor = index.vendor;
+      console.log("name: " + name + " vendor: " + vendor + " price: " + price);
     }
   }
 };
@@ -250,8 +253,8 @@ $(document).ready(function() {
   let prerollLookup = new Lookup();
   let prerollID = "01ccfc60-ab96-4614-bfb8-8dea907e96f0";
   $("#check-preroll").click(function() {
-    $("#buttons").hide();
-    $("#preroll-menu").show();
+    // $("#buttons").hide();
+    // $("#preroll-menu").show();
     prerollLookup.getPrerollData(prerollID, displayPrerollData, error);
   });
   let cartridgeLookup = new Lookup();
