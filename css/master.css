@@ -81,7 +81,7 @@
   .header .logo {
     height: 100%; }
     .header .logo #circle-logo {
-      width: 80px;
+      width: 200px;
       filter: invert(100%);
       margin-top: 10px; }
   .header .menu-title h1 {
@@ -155,6 +155,29 @@
   font-family: 'Gotham Black';
   font-size: 12px;
   border: 2px solid #d1482f; }
+
+.con-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'Gotham Book'; }
+  .con-content .con-cartridges, .con-content .con-live-resins, .con-content .con-shatter, .con-content .con-wax, .con-content .con-rso, .con-content .con-oil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; }
+    .con-content .con-cartridges .con-title, .con-content .con-live-resins .con-title, .con-content .con-shatter .con-title, .con-content .con-wax .con-title, .con-content .con-rso .con-title, .con-content .con-oil .con-title {
+      display: flex;
+      justify-content: center; }
+
+.con-list-item {
+  display: flex;
+  width: 48%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px; }
 
 #flower-menu {
   display: none; }

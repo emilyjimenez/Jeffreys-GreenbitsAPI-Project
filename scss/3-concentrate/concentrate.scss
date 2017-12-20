@@ -1,0 +1,27 @@
+.con-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'Gotham Book';
+  .con-cartridges, .con-live-resins, .con-shatter, .con-wax, .con-rso, .con-oil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .con-title {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+
+.con-list-item {
+  display: flex;
+  width: 48%;
+  background-color: rgba(255,255,255,0.7);
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px;
+}

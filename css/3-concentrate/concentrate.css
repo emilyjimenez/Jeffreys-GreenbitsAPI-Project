@@ -1,0 +1,24 @@
+.con-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'Gotham Book'; }
+  .con-content .con-cartridges, .con-content .con-live-resins, .con-content .con-shatter, .con-content .con-wax, .con-content .con-rso, .con-content .con-oil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; }
+    .con-content .con-cartridges .con-title, .con-content .con-live-resins .con-title, .con-content .con-shatter .con-title, .con-content .con-wax .con-title, .con-content .con-rso .con-title, .con-content .con-oil .con-title {
+      display: flex;
+      justify-content: center; }
+
+.con-list-item {
+  display: flex;
+  width: 48%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px; }
+
+/*# sourceMappingURL=concentrate.css.map */
