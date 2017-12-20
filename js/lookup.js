@@ -25,7 +25,7 @@ export class Lookup {
     });
   }
 
-  getPrerollData(response) {
+  getPrerollData(response, displayPrerollData, error) {
     $.ajax({
       url: `https://api.greenbits.com/api/v1/products?by_active=true&by_product_type=${response}`,
       headers: {
