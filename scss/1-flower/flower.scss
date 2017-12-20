@@ -16,7 +16,6 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-
   .categories {
     display: flex;
     width: 48%;
@@ -39,7 +38,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  font-family: 'Gotham Book';
+  font-family: 'Gotham Medium';
 }
 
 .list-item {
@@ -75,13 +74,4 @@
   .thc, .cbd, .price {
     flex-grow: 1;
   }
-}
-
-// .brand {
-//   align-self: flex-start;
-// }
-.footer {
-  width: 1800px;
-  height: 80px;
-  background-color: white;
 }
