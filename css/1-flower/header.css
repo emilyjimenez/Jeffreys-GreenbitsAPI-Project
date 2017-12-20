@@ -1,39 +1,28 @@
 /*
 Error: Undefined mixin 'icon'.
-        on line 32 of scss/1-flower/header.scss, in `icon'
-        from line 32 of scss/1-flower/header.scss
+        on line 34 of scss/1-flower/header.scss, in `icon'
+        from line 34 of scss/1-flower/header.scss
 
-27:     display: flex;
-28:     width: 150px;
-29:     justify-content: space-around;
-30:   }
-31:   .legend-indica {
-32:     @include icon($indica, 30px, 18px)
-33:   }
-34:   .legend-sativa {
-35:     @include icon($sativa, 30px, 18px)
-36:   }
-37:   .legend-hybrid {
+29:     width: 150px;
+30:     justify-content: space-around;
+31:   }
+32: }
+33: .icon-indica {
+34:   @include icon($indica, 20px, 12px, $indica);
+35: }
+36: .icon-sativa {
+37:   @include icon($sativa, 20px, 12px, $sativa);
+38: }
+39: .icon-hybrid {
 
 Backtrace:
-scss/1-flower/header.scss:32:in `icon'
-scss/1-flower/header.scss:32
+scss/1-flower/header.scss:34:in `icon'
+scss/1-flower/header.scss:34
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:98:in `block in with_mixin'
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:98:in `with_mixin'
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
@@ -84,4 +73,4 @@ scss/1-flower/header.scss:32
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'icon'.\A         on line 32 of scss/1-flower/header.scss, in `icon'\A         from line 32 of scss/1-flower/header.scss\A \A 27:     display: flex;\A 28:     width: 150px;\A 29:     justify-content: space-around;\A 30:   }\A 31:   .legend-indica {\A 32:     @include icon($indica, 30px, 18px)\A 33:   }\A 34:   .legend-sativa {\A 35:     @include icon($sativa, 30px, 18px)\A 36:   }\A 37:   .legend-hybrid {"; }
+  content: "Error: Undefined mixin 'icon'.\A         on line 34 of scss/1-flower/header.scss, in `icon'\A         from line 34 of scss/1-flower/header.scss\A \A 29:     width: 150px;\A 30:     justify-content: space-around;\A 31:   }\A 32: }\A 33: .icon-indica {\A 34:   @include icon($indica, 20px, 12px, $indica);\A 35: }\A 36: .icon-sativa {\A 37:   @include icon($sativa, 20px, 12px, $sativa);\A 38: }\A 39: .icon-hybrid {"; }

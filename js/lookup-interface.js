@@ -15,12 +15,13 @@ let displayFlowerData = function(response) {
         console.log("these are indica: " + name);
         $(".content").append(`<div class="list-item">
                                 <div class="types">
+                                  <p class="icon-indica">I</p>
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">thc</p>
-                                  <p class="cbd">cbd</p>
-                                  <p class="price">price</p>
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
                                 </div>
                               </div>
 
@@ -29,12 +30,13 @@ let displayFlowerData = function(response) {
         console.log("these are sativa: " + name);
         $(".content").append(`<div class="list-item">
                                 <div class="types">
+                                  <p class="icon-sativa">S</p>
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">thc</p>
-                                  <p class="cbd">cbd</p>
-                                  <p class="price">price</p>
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
                                 </div>
                               </div>
 
@@ -43,12 +45,13 @@ let displayFlowerData = function(response) {
         console.log("these are hybrid: " + name);
         $(".content").append(`<div class="list-item">
                                 <div class="types">
+                                  <p class="icon-hybrid">H</p>
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">thc</p>
-                                  <p class="cbd">cbd</p>
-                                  <p class="price">price</p>
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
                                 </div>
                               </div>
 
@@ -57,12 +60,13 @@ let displayFlowerData = function(response) {
         console.log("these are indica hybrid: " + name);
         $(".content").append(`<div class="list-item">
                                 <div class="types">
+                                  <p class="icon-indica-hybrid">H</p>
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">thc</p>
-                                  <p class="cbd">cbd</p>
-                                  <p class="price">price</p>
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
                                 </div>
                               </div>
 
@@ -71,12 +75,13 @@ let displayFlowerData = function(response) {
         console.log("these are sativa hybrid: " + name);
         $(".content").append(`<div class="list-item">
                                 <div class="types">
+                                  <p class="icon-sativa-hybrid">H</p>
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">thc</p>
-                                  <p class="cbd">cbd</p>
-                                  <p class="price">price</p>
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
                                 </div>
                               </div>
 
