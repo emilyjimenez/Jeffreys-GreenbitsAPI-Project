@@ -98,7 +98,12 @@ let displayPrerollData = function(response) {
 
 let displayCartridgeData = function(response) {
   if (response.products.length > 0) {
-    $(".cartridge-content").append(`CARTRIDGE HEADER`);
+    $(".con-content").append(`<div class="con-cartridges">
+                                <div class="con-title">
+                                  <p>Cartridges</p>
+                                </div>
+                              </div>
+      `);
     for (let i = 0; i < response.products.length; i++) {
       let index = response.products[i];
       let name = index.name;
@@ -107,20 +112,49 @@ let displayCartridgeData = function(response) {
       let thc = index.test_results_thc;
       let cbd = index.test_results_cbd;
       let price = index.sell_price;
-      $(".cartridge-content").append(`STUFF`
-      );
+      $(".con-cartridges").append(`<div class="con-list-item">
+                                        <div class="types">
+                                        <p class="brand">${name}</p>
+                                        </div>
+                                        <div class="numbers">
+                                          <p class="thc">${thc}</p>
+                                          <p class="cbd">${cbd}</p>
+                                          <p class="price">${price}</p>
+                                        </div>
+                                      </div>
+
+      `);
     }
   }
 };
 
 let displayConcentrateData = function(response) {
   if (response.products.length > 0) {
-    console.log(response);
-    $(".concentrate-content").append(`CONCENTRATE HEADER - WAX`);
-    $(".concentrate-content").append(`CONCENTRATE HEADER - SHATTER`);
-    $(".concentrate-content").append(`CONCENTRATE HEADER - LIVE RESIN`);
-    $(".concentrate-content").append(`CONCENTRATE HEADER - RSO`);
-    $(".concentrate-content").append(`CONCENTRATE HEADER - OIL`);
+    $(".con-content").append(`<div class="con-wax">
+                                <div class="con-title">
+                                  <p>Wax</p>
+                                </div>
+                              </div>`);
+    $(".con-content").append(`<div class="con-shatter">
+                                <div class="con-title">
+                                  <p>Shatter</p>
+                                </div>
+                              </div>`);
+    $(".con-content").append(`<div class="con-live-resins">
+                                <div class="con-title">
+                                  <p>Live Resin</p>
+                                </div>
+                              </div>`);
+    $(".con-content").append(`<div class="con-rso">
+                                <div class="con-title">
+                                  <p>RSO</p>
+                                </div>
+                              </div>`);
+    $(".con-content").append(`<div class="con-oil">
+                                <div class="con-title">
+                                  <p>Oil</p>
+                                </div>
+                              </div>`);
     for (let i = 0; i < response.products.length; i++) {
       let index = response.products[i];
       let name = index.name;
@@ -131,17 +165,70 @@ let displayConcentrateData = function(response) {
       let price = index.sell_price;
       //Only including concentrate types 0,1,2,8,and 9. When building out full version need to include all concentrate types
       if (concentrateType === 0) {
-        $(".concentrate-content").append(`PLACE UNDER HEADER
+        $(".con-wax").append(`<div class="con-list-item">
+                                          <div class="types">
+                                          <p class="brand">${name}</p>
+                                          </div>
+                                          <div class="numbers">
+                                            <p class="thc">${thc}</p>
+                                            <p class="cbd">${cbd}</p>
+                                            <p class="price">${price}</p>
+                                          </div>
+                                        </div>
 
         `);
       } else if (concentrateType === 1) {
+        $(".con-shatter").append(`<div class="con-list-item">
+                                          <div class="types">
+                                          <p class="brand">${name}</p>
+                                          </div>
+                                          <div class="numbers">
+                                            <p class="thc">${thc}</p>
+                                            <p class="cbd">${cbd}</p>
+                                            <p class="price">${price}</p>
+                                          </div>
+                                        </div>
 
+        `);
       } else if (concentrateType === 2) {
+        $(".con-live-resins").append(`<div class="con-list-item">
+                                          <div class="types">
+                                          <p class="brand">${name}</p>
+                                          </div>
+                                          <div class="numbers">
+                                            <p class="thc">${thc}</p>
+                                            <p class="cbd">${cbd}</p>
+                                            <p class="price">${price}</p>
+                                          </div>
+                                        </div>
 
+        `);
       } else if (concentrateType === 8) {
+        $(".con-rso").append(`<div class="con-list-item">
+                                          <div class="types">
+                                          <p class="brand">${name}</p>
+                                          </div>
+                                          <div class="numbers">
+                                            <p class="thc">${thc}</p>
+                                            <p class="cbd">${cbd}</p>
+                                            <p class="price">${price}</p>
+                                          </div>
+                                        </div>
 
+        `);
       } else {
+        $(".con-oil").append(`<div class="con-list-item">
+                                          <div class="types">
+                                          <p class="brand">${name}</p>
+                                          </div>
+                                          <div class="numbers">
+                                            <p class="thc">${thc}</p>
+                                            <p class="cbd">${cbd}</p>
+                                            <p class="price">${price}</p>
+                                          </div>
+                                        </div>
 
+        `);
       }
     }
   }
