@@ -4,7 +4,7 @@ $indica: #6c345d;
 $yellow: #fbda61;
 $sativa-hybrid: linear-gradient(to bottom right, $sativa, $hybrid);
 
-@mixin icon($color, $size, $font-size) {
+@mixin icon($color, $size, $font-size, $color2) {
   background: $color;
   color: white;
   width: $size;
@@ -13,6 +13,6 @@ $sativa-hybrid: linear-gradient(to bottom right, $sativa, $hybrid);
   justify-content: center;
   align-items: center;
   font-family: 'Gotham Black';
-  text-shadow: 0 0 20px grey;
   font-size: $font-size;
+  border: 2px solid $color2;
 }

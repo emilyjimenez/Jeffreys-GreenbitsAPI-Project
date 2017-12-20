@@ -7,10 +7,8 @@
 .body {
   display: flex;
   flex-direction: column;
-  height: 850px;
-  // background-color: rgba(255,255,255,0.5);
+  height: 900px;
   width: 1800px;
-  // border: 1px solid black;
   padding: 10px;
 }
 
@@ -21,14 +19,17 @@
 
   .categories {
     display: flex;
-    width: 45%;
+    width: 48%;
     background-color: black;
     color: white;
     font-family: 'Gotham Black';
     align-items: center;
-    // padding: 15px;
     height: 30px;
     margin-bottom: 15px;
+
+    .brand{
+      margin-left: 100px;
+    }
   }
 }
 
@@ -41,44 +42,18 @@
   font-family: 'Gotham Book';
 }
 
-// .list-item-odd {
-//   display: flex;
-//   width: 45%;
-//   // border-left: 1px solid $sativa;
-//   // border-bottom: 1px solid $sativa;
-//   // background-color: rgba(209, 72, 47, 0.3);
-//   background-color: rgba(255,255,255,0.5);
-//   padding-bottom: 3px;
-//   padding-top: 3px;
-//   margin-bottom: 2px;
-// }
-
 .list-item {
   display: flex;
-  width: 45%;
-  // border-left: 1px solid $indica;
-  // border-bottom: 1px solid $indica;
-  // background-color: rgba(108, 52, 93, 0.3);
-  background-color: rgba(255,255,255,0.5);
+  width: 48%;
+  background-color: rgba(255,255,255,0.7);
   padding-bottom: 3px;
   padding-top: 3px;
   margin-bottom: 2px;
 }
-//
-// .list-item-hybrid {
-//   display: flex;
-//   width: 45%;
-//   // border-left: 1px solid $indica;
-//   // border-bottom: 1px solid $indica;
-//   // background-color: rgba(121, 186, 48, 0.3);
-//   background-color: rgba(255,255,255,0.5);
-//   padding-bottom: 3px;
-//   padding-top: 3px;
-//   margin-bottom: 2px;
-// }
+
 
 .types {
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -88,15 +63,25 @@
 }
 
 .numbers {
-  width: 60%;
+  width: 40%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+
+  p{
+    width: 10px;
+  }
+
+  .thc, .cbd, .price {
+    flex-grow: 1;
+  }
 }
 
-.brand {
-  align-self: flex-start;
-}
+// .brand {
+//   align-self: flex-start;
+// }
 .footer {
-
+  width: 1800px;
+  height: 80px;
+  background-color: white;
 }

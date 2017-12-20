@@ -6,7 +6,7 @@
 .body {
   display: flex;
   flex-direction: column;
-  height: 850px;
+  height: 900px;
   width: 1800px;
   padding: 10px; }
 
@@ -16,13 +16,15 @@
   width: 100%; }
   .content-header .categories {
     display: flex;
-    width: 45%;
+    width: 48%;
     background-color: black;
     color: white;
     font-family: 'Gotham Black';
     align-items: center;
     height: 30px;
     margin-bottom: 15px; }
+    .content-header .categories .brand {
+      margin-left: 100px; }
 
 .content {
   display: flex;
@@ -33,14 +35,14 @@
 
 .list-item {
   display: flex;
-  width: 45%;
-  background-color: rgba(255, 255, 255, 0.5);
+  width: 48%;
+  background-color: rgba(255, 255, 255, 0.7);
   padding-bottom: 3px;
   padding-top: 3px;
   margin-bottom: 2px; }
 
 .types {
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: flex-start;
   align-items: center; }
@@ -48,12 +50,18 @@
     margin-left: 40px; }
 
 .numbers {
-  width: 60%;
+  width: 40%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center; }
+  .numbers p {
+    width: 10px; }
+  .numbers .thc, .numbers .cbd, .numbers .price {
+    flex-grow: 1; }
 
-.brand {
-  align-self: flex-start; }
+.footer {
+  width: 1800px;
+  height: 80px;
+  background-color: white; }
 
 /*# sourceMappingURL=flower.css.map */

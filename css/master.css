@@ -12,7 +12,7 @@
 .body {
   display: flex;
   flex-direction: column;
-  height: 850px;
+  height: 900px;
   width: 1800px;
   padding: 10px; }
 
@@ -22,13 +22,15 @@
   width: 100%; }
   .content-header .categories {
     display: flex;
-    width: 45%;
+    width: 48%;
     background-color: black;
     color: white;
     font-family: 'Gotham Black';
     align-items: center;
     height: 30px;
     margin-bottom: 15px; }
+    .content-header .categories .brand {
+      margin-left: 100px; }
 
 .content {
   display: flex;
@@ -39,14 +41,14 @@
 
 .list-item {
   display: flex;
-  width: 45%;
-  background-color: rgba(255, 255, 255, 0.5);
+  width: 48%;
+  background-color: rgba(255, 255, 255, 0.7);
   padding-bottom: 3px;
   padding-top: 3px;
   margin-bottom: 2px; }
 
 .types {
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: flex-start;
   align-items: center; }
@@ -54,13 +56,19 @@
     margin-left: 40px; }
 
 .numbers {
-  width: 60%;
+  width: 40%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center; }
+  .numbers p {
+    width: 10px; }
+  .numbers .thc, .numbers .cbd, .numbers .price {
+    flex-grow: 1; }
 
-.brand {
-  align-self: flex-start; }
+.footer {
+  width: 1800px;
+  height: 80px;
+  background-color: white; }
 
 .header {
   display: flex;
@@ -74,7 +82,8 @@
     height: 100%; }
     .header .logo #circle-logo {
       width: 80px;
-      filter: invert(100%); }
+      filter: invert(100%);
+      margin-top: 10px; }
   .header .menu-title h1 {
     color: white;
     font-size: 50px;
@@ -86,42 +95,74 @@
     display: flex;
     width: 150px;
     justify-content: space-around; }
-  .header .legend-indica {
-    background: #6c345d;
-    color: white;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Gotham Black';
-    text-shadow: 0 0 20px grey;
-    font-size: 18px; }
-  .header .legend-sativa {
-    background: #d1482f;
-    color: white;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Gotham Black';
-    text-shadow: 0 0 20px grey;
-    font-size: 18px; }
-  .header .legend-hybrid {
-    background: #79ba30;
-    color: white;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Gotham Black';
-    text-shadow: 0 0 20px grey;
-    font-size: 18px; }
+
+.icon-indica {
+  background: #6c345d;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gotham Black';
+  font-size: 12px;
+  border: 2px solid #6c345d; }
+
+.icon-sativa {
+  background: #d1482f;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gotham Black';
+  font-size: 12px;
+  border: 2px solid #d1482f; }
+
+.icon-hybrid {
+  background: #79ba30;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gotham Black';
+  font-size: 12px;
+  border: 2px solid #79ba30; }
+
+.icon-indica-hybrid {
+  background: #79ba30;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gotham Black';
+  font-size: 12px;
+  border: 2px solid #6c345d; }
+
+.icon-sativa-hybrid {
+  background: #79ba30;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gotham Black';
+  font-size: 12px;
+  border: 2px solid #d1482f; }
 
 #flower-menu {
   display: none; }
+
+#buttons {
+  position: absolute;
+  top: 40%;
+  left: 40%; }
 
 * {
   margin: 0;
