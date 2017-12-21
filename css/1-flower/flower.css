@@ -42,6 +42,11 @@
   padding-top: 3px;
   margin-bottom: 2px; }
 
+.content .types .brand {
+  font-size: 20px; }
+.content .number {
+  font-size: 20px; }
+
 .types {
   width: 60%;
   display: flex;

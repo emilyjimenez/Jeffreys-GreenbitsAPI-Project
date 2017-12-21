@@ -43,21 +43,21 @@
 
 .legend-indica {
   @include icon($indica, 60px, 25px, 16px, $indica);
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 10px #3f3f3f;
 }
 .legend-sativa {
   @include icon($sativa, 60px, 25px, 16px, $sativa);
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 10px #3f3f3f;
 }
 .legend-hybrid {
   @include icon($hybrid, 60px, 25px, 16px, $hybrid);
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 10px #3f3f3f;
 }
 .legend-indica-hybrid {
   @include icon($hybrid, 120px, 25px, 16px, $indica);
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 10px #3f3f3f;
 }
 .legend-sativa-hybrid {
   @include icon($hybrid, 120px, 25px, 16px, $sativa);
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 10px #3f3f3f;
 }
