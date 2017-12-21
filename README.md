@@ -53,9 +53,9 @@ _If you press flower menu, then reload, and press concentrate menu the menu will
 
 ### License
 
-_License TBD
+_License TBD_
 
-Copyright (c) 2017 Emily Wells Jimenez (EWJ Consulting), Brandon Kudo, and Chris Turina_
+_Copyright (c) 2017 Emily Wells Jimenez (EWJ Consulting), Brandon Kudo, and Chris Turina_
 
 ## Contact Details
 
