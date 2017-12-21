@@ -49,8 +49,20 @@
   padding-bottom: 3px;
   padding-top: 3px;
   margin-bottom: 2px;
+
 }
 
+
+.content {
+  .types {
+    .brand {
+      font-size: 20px;
+    }
+  }
+  .number {
+    font-size: 20px;
+  }
+}
 
 .types {
   width: 60%;
@@ -59,6 +71,9 @@
   align-items: center;
   p {
     margin-left: 40px;
+  }
+  .brand {
+    // font-size: 20px;
   }
 }
 
@@ -70,6 +85,7 @@
 
   p{
     width: 10px;
+    // font-size: 20px;
   }
 
   .thc, .cbd, .price {

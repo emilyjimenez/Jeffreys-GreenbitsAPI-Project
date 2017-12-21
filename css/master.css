@@ -13,68 +13,6 @@
 @font-face {
   font-family: 'Gotham Medium Italic';
   src: url("../fonts/Gotham-MediumIta.otf") format("opentype"); }
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.body {
-  display: flex;
-  flex-direction: column;
-  height: 900px;
-  width: 1800px;
-  padding: 10px;
-  margin-bottom: 10px; }
-
-.content-header {
-  display: flex;
-  justify-content: space-around;
-  width: 100%; }
-  .content-header .categories {
-    display: flex;
-    width: 48%;
-    background-color: black;
-    color: white;
-    font-family: 'Gotham Black';
-    align-items: center;
-    height: 30px;
-    margin-bottom: 15px; }
-    .content-header .categories .brand {
-      margin-left: 100px; }
-
-.content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  font-family: 'Gotham Medium'; }
-
-.list-item {
-  display: flex;
-  width: 48%;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding-bottom: 3px;
-  padding-top: 3px;
-  margin-bottom: 2px; }
-
-.types {
-  width: 60%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center; }
-  .types p {
-    margin-left: 40px; }
-
-.numbers {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .numbers p {
-    width: 10px; }
-  .numbers .thc, .numbers .cbd, .numbers .price {
-    flex-grow: 1; }
-
 .header {
   display: flex;
   flex-direction: row;
@@ -167,7 +105,7 @@
   font-family: 'Gotham Black';
   font-size: 16px;
   border: 2px solid #6c345d;
-  box-shadow: 2px 2px 5px black; }
+  box-shadow: 2px 2px 10px #3f3f3f; }
 
 .legend-sativa {
   background: #d1482f;
@@ -180,7 +118,7 @@
   font-family: 'Gotham Black';
   font-size: 16px;
   border: 2px solid #d1482f;
-  box-shadow: 2px 2px 5px black; }
+  box-shadow: 2px 2px 10px #3f3f3f; }
 
 .legend-hybrid {
   background: #79ba30;
@@ -193,7 +131,7 @@
   font-family: 'Gotham Black';
   font-size: 16px;
   border: 2px solid #79ba30;
-  box-shadow: 2px 2px 5px black; }
+  box-shadow: 2px 2px 10px #3f3f3f; }
 
 .legend-indica-hybrid {
   background: #79ba30;
@@ -206,7 +144,7 @@
   font-family: 'Gotham Black';
   font-size: 16px;
   border: 2px solid #6c345d;
-  box-shadow: 2px 2px 5px black; }
+  box-shadow: 2px 2px 10px #3f3f3f; }
 
 .legend-sativa-hybrid {
   background: #79ba30;
@@ -219,7 +157,74 @@
   font-family: 'Gotham Black';
   font-size: 16px;
   border: 2px solid #d1482f;
-  box-shadow: 2px 2px 5px black; }
+  box-shadow: 2px 2px 10px #3f3f3f; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 900px;
+  width: 1800px;
+  padding: 10px;
+  margin-bottom: 10px; }
+
+.content-header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; }
+  .content-header .categories {
+    display: flex;
+    width: 48%;
+    background-color: black;
+    color: white;
+    font-family: 'Gotham Black';
+    align-items: center;
+    height: 30px;
+    margin-bottom: 15px; }
+    .content-header .categories .brand {
+      margin-left: 100px; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'Gotham Medium'; }
+
+.list-item {
+  display: flex;
+  width: 48%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px; }
+
+.content .types .brand {
+  font-size: 20px; }
+.content .number {
+  font-size: 20px; }
+
+.types {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .types p {
+    margin-left: 40px; }
+
+.numbers {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .numbers p {
+    width: 10px; }
+  .numbers .thc, .numbers .cbd, .numbers .price {
+    flex-grow: 1; }
 
 .con-content {
   display: flex;
