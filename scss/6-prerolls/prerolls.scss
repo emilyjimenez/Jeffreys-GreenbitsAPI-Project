@@ -1,0 +1,48 @@
+.content-header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  .pre-categories {
+    display: flex;
+    width: 48%;
+    background-color: black;
+    color: white;
+    font-family: 'Gotham Black';
+    align-items: center;
+    height: 30px;
+    margin-bottom: 15px;
+
+    .brand{
+      margin-left: 100px;
+    }
+  }
+}
+
+.pre-types {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  p {
+    margin-left: 40px;
+  }
+  .brand {
+    // font-size: 20px;
+  }
+}
+
+.pre-numbers {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p{
+    width: 10px;
+    // font-size: 20px;
+  }
+
+  .thc, .cbd, .price, .grams {
+    flex-grow: 1;
+  }
+}

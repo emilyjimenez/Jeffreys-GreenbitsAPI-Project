@@ -308,5 +308,7 @@ $(document).ready(function() {
     $("#concentrate-menu").hide();
     $(".con-content").empty();
     $("#buttons").show();
+    $(".pre-content").empty();
+    $("#preroll-menu").hide();
   });
 });
