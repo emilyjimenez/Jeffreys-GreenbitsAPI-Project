@@ -139,7 +139,7 @@ toCurrency(price) {
 
 toPercent(input) {
   if (input === null) {
-    input = "-"
+    input = "-";
     return input;
   } else {
     let percent = input * 100;
