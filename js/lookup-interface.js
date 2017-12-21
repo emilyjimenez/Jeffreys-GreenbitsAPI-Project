@@ -65,10 +65,24 @@ let displayFlowerData = function(response) {
                               </div>
 
         `);
-      } else {
+      } else if (flowerType === 4) {
         $(".content").append(`<div class="list-item">
                                 <div class="types">
                                   <p class="icon-sativa-hybrid">H</p>
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="numbers">
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
+                                </div>
+                              </div>
+
+        `);
+      } else {
+        $(".content").append(`<div class="list-item">
+                                <div class="types">
+                                  <p class="icon-null"></p>
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
@@ -100,9 +114,11 @@ let displayCartridgeData = function(response) {
       let thc = index.test_results_thc;
       let cbd = index.test_results_cbd;
       let price = index.sell_price;
+      if (flowerType === 0) {
       $(".con-cartridges").append(`<div class="con-list-item">
                                         <div class="types">
-                                        <p class="brand">${name}</p>
+                                          <p class="icon-indica">I</p>
+                                          <p class="brand">${name}</p>
                                         </div>
                                         <div class="numbers">
                                           <p class="thc">${thc}</p>
@@ -110,8 +126,73 @@ let displayCartridgeData = function(response) {
                                           <p class="price">${price}</p>
                                         </div>
                                       </div>
-
       `);
+      } else if (flowerType === 1) {
+        $(".con-cartridges").append(`<div class="con-list-item">
+                                      <div class="types">
+                                        <p class="icon-sativa">S</p>
+                                        <p class="brand">${name}</p>
+                                      </div>
+                                      <div class="numbers">
+                                        <p class="thc">${thc}</p>
+                                        <p class="cbd">${cbd}</p>
+                                        <p class="price">${price}</p>
+                                      </div>
+                                    </div>
+      `);
+    } else if (flowerType === 2) {
+      $(".con-cartridges").append(`<div class="con-list-item">
+                                      <div class="types">
+                                        <p class="icon-hybrid">H</p>
+                                        <p class="brand">${name}</p>
+                                      </div>
+                                      <div class="numbers">
+                                        <p class="thc">${thc}</p>
+                                        <p class="cbd">${cbd}</p>
+                                        <p class="price">${price}</p>
+                                      </div>
+                                    </div>
+      `);
+    } else if (flowerType === 3) {
+      $(".con-cartridges").append(`<div class="con-list-item">
+                                      <div class="types">
+                                        <p class="icon-indica-hybrid">H</p>
+                                        <p class="brand">${name}</p>
+                                      </div>
+                                      <div class="numbers">
+                                        <p class="thc">${thc}</p>
+                                        <p class="cbd">${cbd}</p>
+                                        <p class="price">${price}</p>
+                                      </div>
+                                    </div>
+      `);
+    } else if (flowerType === 4) {
+      $(".con-cartridges").append(`<div class="con-list-item">
+                                      <div class="types">
+                                        <p class="icon-sativa-hybrid">H</p>
+                                        <p class="brand">${name}</p>
+                                      </div>
+                                      <div class="numbers">
+                                        <p class="thc">${thc}</p>
+                                        <p class="cbd">${cbd}</p>
+                                        <p class="price">${price}</p>
+                                      </div>
+                                    </div>
+      `);
+    } else {
+      $(".con-cartridges").append(`<div class="con-list-item">
+                                      <div class="types">
+                                        <p class="icon-null"></p>
+                                      <p class="brand">${name}</p>
+                                      </div>
+                                      <div class="numbers">
+                                        <p class="thc">${thc}</p>
+                                        <p class="cbd">${cbd}</p>
+                                        <p class="price">${price}</p>
+                                      </div>
+                                    </div>
+      `);
+      }
     }
   }
 };
@@ -153,60 +234,266 @@ let displayConcentrateData = function(response) {
       let price = index.sell_price;
       //Only including concentrate types 0,1,2,8,and 9. When building out full version need to include all concentrate types
       if (concentrateType === 0) {
-        $(".con-wax").append(`<div class="con-list-item">
-                                          <div class="types">
-                                          <p class="brand">${name}</p>
+        if (flowerType === 0) {
+          $(".con-wax").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-indica">I</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
                                           </div>
-                                          <div class="numbers">
-                                            <p class="thc">${thc}</p>
-                                            <p class="cbd">${cbd}</p>
-                                            <p class="price">${price}</p>
+          `);
+        } else if (flowerType === 1) {
+          $(".con-wax").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-sativa">S</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
                                           </div>
-                                        </div>
+          `);
+        } else if (flowerType === 2) {
+          $(".con-wax").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-hybrid">H</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+          `);
+        } else if (flowerType === 3) {
+          $(".con-wax").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-indica-hybrid">H</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+          `);
+        } else if (flowerType === 4) {
+          $(".con-wax").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-sativa-hybrid">H</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+          `);
+        } else {
+          $(".con-wax").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-null"></p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+          `);
+        }
+      }
 
-        `);
-      } else if (concentrateType === 1) {
-        $(".con-shatter").append(`<div class="con-list-item">
-                                          <div class="types">
-                                          <p class="brand">${name}</p>
+      if (concentrateType === 1) {
+        if (flowerType === 0) {
+          $(".con-shatter").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-indica">I</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
                                           </div>
-                                          <div class="numbers">
-                                            <p class="thc">${thc}</p>
-                                            <p class="cbd">${cbd}</p>
-                                            <p class="price">${price}</p>
-                                          </div>
-                                        </div>
 
-        `);
-      } else if (concentrateType === 2) {
-        $(".con-live-resins").append(`<div class="con-list-item">
-                                          <div class="types">
-                                          <p class="brand">${name}</p>
+          `);
+        } else if (flowerType === 1) {
+          $(".con-shatter").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-sativa">S</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
                                           </div>
-                                          <div class="numbers">
-                                            <p class="thc">${thc}</p>
-                                            <p class="cbd">${cbd}</p>
-                                            <p class="price">${price}</p>
-                                          </div>
-                                        </div>
 
-        `);
-      } else if (concentrateType === 8) {
+          `);
+        } else if (flowerType === 2) {
+          $(".con-shatter").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-hybrid">H</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else if (flowerType === 3) {
+          $(".con-shatter").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-indica-hybrid">H</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else if (flowerType === 4) {
+          $(".con-shatter").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-sativa-hybrid">H</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else {
+          $(".con-shatter").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-null"></p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        }
+      }
+      if (concentrateType === 2) {
+        if (flowerType === 0) {
+          $(".con-live-resins").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-indica">I</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else if (flowerType === 1) {
+          $(".con-live-resins").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-sativa">S</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else if (flowerType === 2) {
+          $(".con-live-resins").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-hybrid">H</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else if (flowerType === 3) {
+          $(".con-live-resins").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-indica-hybrid">H</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else if (flowerType === 4) {
+          $(".con-live-resins").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-sativa-hybrid">H</p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else {
+          $(".con-live-resins").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-null"></p>
+                                              <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        }
+      }
+//RSO flower type is always null, no need for flower type if statement
+      if (concentrateType === 8) {
         $(".con-rso").append(`<div class="con-list-item">
                                           <div class="types">
-                                          <p class="brand">${name}</p>
-                                          </div>
-                                          <div class="numbers">
-                                            <p class="thc">${thc}</p>
-                                            <p class="cbd">${cbd}</p>
-                                            <p class="price">${price}</p>
-                                          </div>
-                                        </div>
-
-        `);
-      } else {
-        $(".con-oil").append(`<div class="con-list-item">
-                                          <div class="types">
+                                          <p class="icon-null"></p>
                                           <p class="brand">${name}</p>
                                           </div>
                                           <div class="numbers">
@@ -218,9 +505,101 @@ let displayConcentrateData = function(response) {
 
         `);
       }
+
+      if (concentrateType === 9) {
+        if (flowerType === 0) {
+          $(".con-oil").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-indica">I</p>
+                                            <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else if (flowerType === 1) {
+          $(".con-oil").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-sativa">S</p>
+                                            <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else if (flowerType === 2) {
+          $(".con-oil").append(`<div class="con-list-item">
+                                            <div class="types">
+                                              <p class="icon-hybrid">H</p>
+                                            <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else if (flowerType === 3) {
+          $(".con-oil").append(`<div class="con-list-item">
+                                            <div class="types">
+                                            <p class="icon-indica-hybrid">H</p>
+                                            <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else if (flowerType === 4) {
+          $(".con-oil").append(`<div class="con-list-item">
+                                            <div class="types">
+                                            <p class="icon-sativa-hybrid">H</p>
+                                            <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        } else {
+          $(".con-oil").append(`<div class="con-list-item">
+                                            <div class="types">
+                                            <p class="icon-null"></p>
+                                            <p class="brand">${name}</p>
+                                            </div>
+                                            <div class="numbers">
+                                              <p class="thc">${thc}</p>
+                                              <p class="cbd">${cbd}</p>
+                                              <p class="price">${price}</p>
+                                            </div>
+                                          </div>
+
+          `);
+        }
+      }
+
+      }
+
+
     }
-  }
-};
+  };
+
 //intended for preroll data menu optimization but holding off
 // let displayStrainNames = function(response) {
 //   let strainNames = [];

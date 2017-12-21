@@ -94,6 +94,18 @@
   font-size: 12px;
   border: 2px solid #d1482f; }
 
+.icon-null {
+  background: transparent;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gotham Black';
+  font-size: 12px;
+  border: 2px solid transparent; }
+
 .legend-indica {
   background: #6c345d;
   color: white;

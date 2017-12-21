@@ -25,6 +25,8 @@ _Web app for TV display(1920x1080) to show Jeffrey's Flower and Oil dispensary m
 
 ## Further Exploration
 
+Name check character length method for long names that mess with tables in menu
+
 
 ## Setup/Installation Requirements
 
