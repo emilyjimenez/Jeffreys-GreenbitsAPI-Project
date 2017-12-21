@@ -8,8 +8,21 @@
   display: flex;
   align-items: center;
   border-top: 3px solid #d8d8d8;
+  .legend {
+    background-image: linear-gradient(to bottom, #a8a8a8, #d8d8d8, #d8d8d8, #d8d8d8, #d8d8d8, #d8d8d8, #d8d8d8, #d8d8d8, #a8a8a8);
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    z-index: 1;
+  }
   .marquee {
+    width: 70%;
     animation: marquee 25s linear 0s infinite;
+    overflow: hidden;
     p {
       font-size: 30px;
       font-family: 'Gotham Medium Italic';
@@ -21,11 +34,11 @@
 
 @keyframes marquee {
   0% {
-    transform: translateX(1950px);
+    transform: translateX(1600px);
     // right: 0;
   }
   100% {
     // left: 0;
-    transform: translateX(-30px);
+    transform: translateX(-80px);
   }
 }
