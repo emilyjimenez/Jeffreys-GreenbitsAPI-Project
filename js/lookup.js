@@ -24,49 +24,6 @@ export class Lookup {
       }
     });
   }
-  //Limiting concentrate menu to only display 60 prerolls per notes from client on downsizing menu, menu does not include 1 dollar joint deal, showing prerolls between 5 and 50 dollars
-  getPrerollData(response, displayPrerollData, error) {
-    $.ajax({
-      url: `https://api.greenbits.com/api/v1/products?limit=60&by_active=true&by_product_type=${response}&sort_by[field]=sell_price&sort_by[direction]=asc&by_sell_price[sell_price]=500,5000&by_sell_price[comparator]=between`,
-      headers: {
-        'Authorization': authorizationToken,
-      },
-      type: 'GET',
-      data: {
-        format: 'json'
-      },
-      success: function(response) {
-
-      displayPrerollData(response);
-
-      },
-      error: function() {
-        alert('FAIL WHALE');
-      }
-    });
-  }
-
-  getStrainNames(response, displayStrainNames, error) {
-    $.ajax({
-        url: `https://api.greenbits.com/api/v1/${response}/`,
-        headers: {
-          'Authorization': authorizationToken,
-        },
-        type: 'GET',
-        data: {
-          format: 'json'
-      },
-      success: function(response) {
-          displayStrainNames(response);
-      },
-      error: function() {
-        alert('fail whale');
-      }
-  });
-}
-
-
-
 
 
 //Limiting concentrate menu to only display 25 cartridges and 25 concentrates per notes from client on downsizing menu
@@ -112,5 +69,66 @@ export class Lookup {
       }
     });
   }
+
+  getStrainNames(response, displayStrainNames, error) {
+    $.ajax({
+      url: `https://api.greenbits.com/api/v1/${response}/`,
+      headers: {
+        'Authorization': authorizationToken,
+      },
+      type: 'GET',
+      data: {
+        format: 'json'
+      },
+      success: function(response) {
+          displayStrainNames(response);
+      },
+      error: function() {
+        alert('fail whale');
+      }
+  });
+}
+
+getBrandNames(response, displayBrandNames, error) {
+  $.ajax({
+    url: `https://api.greenbits.com/api/v1/${response}/`,
+    headers: {
+      'Authorization': authorizationToken,
+    },
+    type: 'GET',
+    data: {
+      format: 'json'
+    },
+    success: function(response) {
+        displayBrandNames(response);
+    },
+    error: function() {
+      alert('fail whale');
+    }
+  });
+}
+
+
+//Limiting concentrate menu to only display 60 prerolls per notes from client on downsizing menu, menu does not include 1 dollar joint deal, showing prerolls between 5 and 50 dollars
+getPrerollData(response, displayPrerollData, error) {
+  $.ajax({
+    url: `https://api.greenbits.com/api/v1/products?limit=60&by_active=true&by_product_type=${response}&sort_by[field]=sell_price&sort_by[direction]=asc&by_sell_price[sell_price]=500,5000&by_sell_price[comparator]=between`,
+    headers: {
+      'Authorization': authorizationToken,
+    },
+    type: 'GET',
+    data: {
+      format: 'json'
+    },
+    success: function(response) {
+
+    displayPrerollData(response);
+
+    },
+    error: function() {
+      alert('FAIL WHALE');
+    }
+  });
+}
 
 }

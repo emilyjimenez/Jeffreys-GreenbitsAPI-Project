@@ -84,22 +84,6 @@ let displayFlowerData = function(response) {
   }
 };
 
-let displayPrerollData = function(response) {
-  // if (response.length > 0) {
-  //   for (let i = 0; i < response.length; i++) {
-  //     let index = response[i];
-  //     let name = index.name;
-  //     let flowerType = index.flower_type;
-  //     let thc = index.test_results_thc;
-  //     let cbd = index.test_results_cbd;
-  //     let price = index.sell_price;
-  //     let vendor = index.vendor;
-  //     let brand = index.brand_name;
-  //     console.log("name: " + name + " brand: " + brand + " price: " + price);
-  //   }
-  // }
-};
-
 let displayCartridgeData = function(response) {
   if (response.products.length > 0) {
     $(".con-content").append(`<div class="con-cartridges">
@@ -237,22 +221,46 @@ let displayConcentrateData = function(response) {
     }
   }
 };
-//FOCUSE YOUR ATTENTION HERE! YOU ALMOST HAVE IT!
+
 let displayStrainNames = function(response) {
   let strainNames = [];
-  console.log(response);
-  console.log("length: " + response.strains.length);
   for (let i = 0; i < response.strains.length; i++) {
     let index = response.strains[i];
     let strainID = index.id;
     let strainName = index.name;
-    console.log(strainID);
-    console.log(strainName);
     strainNames.push([strainID, strainName]);
-    console.log(strainNames);
   }
   return strainNames;
 }
+
+let displayBrandNames = function(response) {
+  let brandNames = [];
+  for (let i = 0; i < response.brands.length; i++) {
+    let index = response.brands[i];
+    let brandID = index.id;
+    let brandName = index.name;
+    brandNames.push([brandID, brandName]);
+  }
+  return brandNames;
+}
+
+
+let displayPrerollData = function(response, strainNames, brandNames, error) {
+  if (response.products.length > 0) {
+    for (let i = 0; i < response.products.length; i++) {
+      let index = response.products[i];
+      let name = index.name;
+      let flowerType = index.flower_type;
+      let thc = index.test_results_thc;
+      let cbd = index.test_results_cbd;
+      let price = index.sell_price;
+      let strain = index.strain_id;
+      let brand = index.brand_id;
+      console.log("this is the name: " + name)
+      console.log(strainNames);
+    }
+  }
+};
 
 let error = function(error) {
   alert("U FAIL");
@@ -262,25 +270,32 @@ let error = function(error) {
 $(document).ready(function() {
   let flowerLookup = new Lookup();
   let flowerID = "87e148b0-c86f-4e8a-8089-0c5cd34dd3c1";
+  let prerollLookup = new Lookup();
+  let prerollID = "01ccfc60-ab96-4614-bfb8-8dea907e96f0";
+  let strainLookup = new Lookup();
+  let strains = "strains";
+  let brandLookup = new Lookup();
+  let brands = "brands";
+  let cartridgeLookup = new Lookup();
+  let cartridgeID = "81135415-1a22-4c85-b332-d9eea906633d";
+  let concentrateLookup = new Lookup();
+  let concentrateID = "0ff11ccf-3221-46ae-ae81-9f81228b88cf";
+
   $("#check-flower").click(function() {
     $("#buttons").hide();
     $("#flower-menu").show();
     flowerLookup.getFlowerData(flowerID, displayFlowerData, error);
   });
-  let prerollLookup = new Lookup();
-  let prerollID = "01ccfc60-ab96-4614-bfb8-8dea907e96f0";
-  let strainLookup = new Lookup();
-  let response = "strains";
+
+
   $("#check-preroll").click(function() {
-    // $("#buttons").hide();
-    // $("#preroll-menu").show();
-    strainLookup.getStrainNames(response, displayStrainNames, error);
+    $("#buttons").hide();
+    $("#preroll-menu").show();
+    var test = brandLookup.getBrandNames(brands, displayBrandNames);
+    strainLookup.getStrainNames(strains, displayStrainNames);
     prerollLookup.getPrerollData(prerollID, displayPrerollData, error);
   });
-  let cartridgeLookup = new Lookup();
-  let cartridgeID = "81135415-1a22-4c85-b332-d9eea906633d";
-  let concentrateLookup = new Lookup();
-  let concentrateID = "0ff11ccf-3221-46ae-ae81-9f81228b88cf";
+
   $("#check-cartridge-concentrate").click(function() {
     $("#buttons").hide();
     $("#concentrate-menu").show();
