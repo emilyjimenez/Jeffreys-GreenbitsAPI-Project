@@ -90,9 +90,9 @@ let displayFlowerData = function(response) {
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
@@ -111,6 +111,7 @@ let displayCartridgeData = function(response) {
                               </div>
       `);
     for (let i = 0; i < response.products.length; i++) {
+      let newLookup = new Lookup();
       let index = response.products[i];
       let name = index.name;
       let flowerType = index.flower_type;
@@ -118,6 +119,9 @@ let displayCartridgeData = function(response) {
       let thc = index.test_results_thc;
       let cbd = index.test_results_cbd;
       let price = index.sell_price;
+      let money = newLookup.toCurrency(price);
+      let thcPercent = newLookup.toPercent(thc);
+      let cbdPercent = newLookup.toPercent(cbd);
       if (flowerType === 0) {
       $(".con-cartridges").append(`<div class="con-list-item">
                                         <div class="types">
@@ -125,9 +129,9 @@ let displayCartridgeData = function(response) {
                                           <p class="brand">${name}</p>
                                         </div>
                                         <div class="numbers">
-                                          <p class="thc">${thc}</p>
-                                          <p class="cbd">${cbd}</p>
-                                          <p class="price">${price}</p>
+                                          <p class="thc">${thcPercent}</p>
+                                          <p class="cbd">${cbdPercent}</p>
+                                          <p class="price">${money}</p>
                                         </div>
                                       </div>
       `);
@@ -138,9 +142,9 @@ let displayCartridgeData = function(response) {
                                         <p class="brand">${name}</p>
                                       </div>
                                       <div class="numbers">
-                                        <p class="thc">${thc}</p>
-                                        <p class="cbd">${cbd}</p>
-                                        <p class="price">${price}</p>
+                                        <p class="thc">${thcPercent}</p>
+                                        <p class="cbd">${cbdPercent}</p>
+                                        <p class="price">${money}</p>
                                       </div>
                                     </div>
       `);
@@ -151,9 +155,9 @@ let displayCartridgeData = function(response) {
                                         <p class="brand">${name}</p>
                                       </div>
                                       <div class="numbers">
-                                        <p class="thc">${thc}</p>
-                                        <p class="cbd">${cbd}</p>
-                                        <p class="price">${price}</p>
+                                        <p class="thc">${thcPercent}</p>
+                                        <p class="cbd">${cbdPercent}</p>
+                                        <p class="price">${money}</p>
                                       </div>
                                     </div>
       `);
@@ -164,9 +168,9 @@ let displayCartridgeData = function(response) {
                                         <p class="brand">${name}</p>
                                       </div>
                                       <div class="numbers">
-                                        <p class="thc">${thc}</p>
-                                        <p class="cbd">${cbd}</p>
-                                        <p class="price">${price}</p>
+                                        <p class="thc">${thcPercent}</p>
+                                        <p class="cbd">${cbdPercent}</p>
+                                        <p class="price">${money}</p>
                                       </div>
                                     </div>
       `);
@@ -177,9 +181,9 @@ let displayCartridgeData = function(response) {
                                         <p class="brand">${name}</p>
                                       </div>
                                       <div class="numbers">
-                                        <p class="thc">${thc}</p>
-                                        <p class="cbd">${cbd}</p>
-                                        <p class="price">${price}</p>
+                                        <p class="thc">${thcPercent}</p>
+                                        <p class="cbd">${cbdPercent}</p>
+                                        <p class="price">${money}</p>
                                       </div>
                                     </div>
       `);
@@ -190,9 +194,9 @@ let displayCartridgeData = function(response) {
                                       <p class="brand">${name}</p>
                                       </div>
                                       <div class="numbers">
-                                        <p class="thc">${thc}</p>
-                                        <p class="cbd">${cbd}</p>
-                                        <p class="price">${price}</p>
+                                        <p class="thc">${thcPercent}</p>
+                                        <p class="cbd">${cbdPercent}</p>
+                                        <p class="price">${money}</p>
                                       </div>
                                     </div>
       `);
@@ -229,6 +233,7 @@ let displayConcentrateData = function(response) {
                                 </div>
                               </div>`);
     for (let i = 0; i < response.products.length; i++) {
+      let newLookup = new Lookup();
       let index = response.products[i];
       let name = index.name;
       let flowerType = index.flower_type;
@@ -236,6 +241,9 @@ let displayConcentrateData = function(response) {
       let thc = index.test_results_thc;
       let cbd = index.test_results_cbd;
       let price = index.sell_price;
+      let money = newLookup.toCurrency(price);
+      let thcPercent = newLookup.toPercent(thc);
+      let cbdPercent = newLookup.toPercent(cbd);
       //Only including concentrate types 0,1,2,8,and 9. When building out full version need to include all concentrate types
       if (concentrateType === 0) {
         if (flowerType === 0) {
@@ -245,9 +253,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
           `);
@@ -258,9 +266,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
           `);
@@ -271,9 +279,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
           `);
@@ -284,9 +292,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
           `);
@@ -297,9 +305,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
           `);
@@ -310,9 +318,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
           `);
@@ -327,9 +335,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -341,9 +349,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -355,9 +363,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -369,9 +377,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -383,9 +391,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -397,9 +405,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -414,9 +422,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -428,9 +436,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -442,9 +450,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -456,9 +464,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -470,9 +478,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -484,9 +492,9 @@ let displayConcentrateData = function(response) {
                                               <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -501,9 +509,9 @@ let displayConcentrateData = function(response) {
                                           <p class="brand">${name}</p>
                                           </div>
                                           <div class="numbers">
-                                            <p class="thc">${thc}</p>
-                                            <p class="cbd">${cbd}</p>
-                                            <p class="price">${price}</p>
+                                            <p class="thc">${thcPercent}</p>
+                                            <p class="cbd">${cbdPercent}</p>
+                                            <p class="price">${money}</p>
                                           </div>
                                         </div>
 
@@ -518,9 +526,9 @@ let displayConcentrateData = function(response) {
                                             <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -532,9 +540,9 @@ let displayConcentrateData = function(response) {
                                             <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -546,9 +554,9 @@ let displayConcentrateData = function(response) {
                                             <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -560,9 +568,9 @@ let displayConcentrateData = function(response) {
                                             <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -574,9 +582,9 @@ let displayConcentrateData = function(response) {
                                             <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -588,9 +596,9 @@ let displayConcentrateData = function(response) {
                                             <p class="brand">${name}</p>
                                             </div>
                                             <div class="numbers">
-                                              <p class="thc">${thc}</p>
-                                              <p class="cbd">${cbd}</p>
-                                              <p class="price">${price}</p>
+                                              <p class="thc">${thcPercent}</p>
+                                              <p class="cbd">${cbdPercent}</p>
+                                              <p class="price">${money}</p>
                                             </div>
                                           </div>
 
@@ -629,6 +637,7 @@ let displayConcentrateData = function(response) {
 let displayPrerollData = function(response, error) {
   if (response.products.length > 0) {
     for (let i = 0; i < response.products.length; i++) {
+      let newLookup = new Lookup();
       let index = response.products[i];
       let name = index.name;
       let flowerType = index.flower_type;
@@ -636,6 +645,9 @@ let displayPrerollData = function(response, error) {
       let cbd = index.test_results_cbd;
       let price = index.sell_price;
       let grams = index.weight.value;
+      let money = newLookup.toCurrency(price);
+      let thcPercent = newLookup.toPercent(thc);
+      let cbdPercent = newLookup.toPercent(cbd);
       if (cbd === null) {
         cbd = "-";
       }
@@ -650,9 +662,9 @@ let displayPrerollData = function(response, error) {
                                 </div>
                                 <div class="pre-numbers">
                                   <p class="grams">${grams}</p>
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
@@ -665,9 +677,9 @@ let displayPrerollData = function(response, error) {
                                 </div>
                                 <div class="pre-numbers">
                                   <p class="grams">${grams}</p>
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
@@ -680,9 +692,9 @@ let displayPrerollData = function(response, error) {
                                 </div>
                                 <div class="pre-numbers">
                                   <p class="grams">${grams}</p>
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
@@ -695,9 +707,9 @@ let displayPrerollData = function(response, error) {
                                 </div>
                                 <div class="pre-numbers">
                                   <p class="grams">${grams}</p>
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
@@ -710,9 +722,9 @@ let displayPrerollData = function(response, error) {
                                 </div>
                                 <div class="pre-numbers">
                                   <p class="grams">${grams}</p>
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
