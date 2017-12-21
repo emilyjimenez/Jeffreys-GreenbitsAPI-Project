@@ -6,7 +6,7 @@ export class Lookup {
 
   getFlowerData(response, displayFlowerData, error) {
     $.ajax({
-      url: `https://api.greenbits.com/api/v1/products?by_active=true&by_product_type=${response}`,
+      url: `https://api.greenbits.com/api/v1/products?by_active=true&by_product_type=${response}&by_quantity[quantity]=1&by_quantity[comparator]=>=`,
       headers: {
         'Authorization': authorizationToken,
       },
