@@ -30,9 +30,12 @@ Name check character length method for long names that mess with tables in menu
 
 ## Setup/Installation Requirements
 
-1. _Clone [Doctor-Lookup](https://github.com/emilyjimenez/Doctor-Lookup) from Github in the terminal of your choice._
+1. _Open the Termial of the Computer and type:
+  git clone https://github.com/emilyjimenez/Jeffreys-GreenbitsAPI-Project.git
+  ```_
 
-2. _Install [node.js](https://nodejs.org/en/) if you do not have it installed._
+2. _Then type:
+  cd Jeffreys-GreenbitsAPI-Project_
 
 3. _To run the application and view in your preferred browser of choice, run the following commands once you're in the project directory in the terminal. 'npm install', 'bower install', 'gulp build', and 'gulp serve'. **note** Project will not build if you do not have a .env file set up with an API token. API tokens are available for those who use the greenbits POS software._
 
