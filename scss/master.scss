@@ -1,7 +1,7 @@
 @import 'fonts';
 @import '2-abstracts/variables';
-@import '1-flower/flower';
 @import '1-flower/header';
+@import '1-flower/flower';
 @import '3-concentrate/concentrate';
 @import '4-welcome/welcome';
 @import '5-marquee/marquee';
@@ -27,12 +27,7 @@
 body {
   background-image: url("../img/wood.jpg");
   background-size: cover;
+  width: 1920px;
+  height: 1080px;
   // font-family: 'Gotham Black';
 }
-
-// .container {
-//   height: 100vh;
-//   width: 100vw;
-//   background-size: cover;
-//   // background-color: $hybrid;
-// }
