@@ -3,12 +3,16 @@ import { Lookup } from './../js/lookup.js';
 let displayFlowerData = function(response) {
   if (response.products.length > 0) {
     for (let i = 0; i < response.products.length; i++) {
+      let newLookup = new Lookup();
       let index = response.products[i];
       let name = index.name;
       let flowerType = index.flower_type;
       let thc = index.test_results_thc;
       let cbd = index.test_results_cbd;
       let price = index.sell_price;
+      let money = newLookup.toCurrency(price);
+      let thcPercent = newLookup.toPercent(thc);
+      let cbdPercent = newLookup.toPercent(cbd);
       if (flowerType === 0) {
         $(".content").append(`<div class="list-item">
                                 <div class="types">
@@ -16,9 +20,9 @@ let displayFlowerData = function(response) {
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
@@ -30,9 +34,9 @@ let displayFlowerData = function(response) {
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
@@ -44,9 +48,9 @@ let displayFlowerData = function(response) {
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
@@ -58,9 +62,9 @@ let displayFlowerData = function(response) {
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
@@ -72,9 +76,9 @@ let displayFlowerData = function(response) {
                                   <p class="brand">${name}</p>
                                 </div>
                                 <div class="numbers">
-                                  <p class="thc">${thc}</p>
-                                  <p class="cbd">${cbd}</p>
-                                  <p class="price">${price}</p>
+                                  <p class="thc">${thcPercent}</p>
+                                  <p class="cbd">${cbdPercent}</p>
+                                  <p class="price">${money}</p>
                                 </div>
                               </div>
 
@@ -252,7 +256,89 @@ let displayPrerollData = function(response, error) {
       let thc = index.test_results_thc;
       let cbd = index.test_results_cbd;
       let price = index.sell_price;
-      let grams = index.value;
+      let grams = index.weight.value;
+      if (cbd === null) {
+        cbd = "-";
+      }
+      if (thc === null) {
+        thc = "-";
+      }
+      if (flowerType === 0) {
+        $(".pre-content").append(`<div class="pre-list-item">
+                                <div class="pre-types">
+                                  <p class="icon-indica">I</p>
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="pre-numbers">
+                                  <p class="grams">${grams}</p>
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
+                                </div>
+                              </div>
+
+        `);
+      } else if (flowerType === 1) {
+        $(".pre-content").append(`<div class="pre-list-item">
+                                <div class="pre-types">
+                                  <p class="icon-sativa">S</p>
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="pre-numbers">
+                                  <p class="grams">${grams}</p>
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
+                                </div>
+                              </div>
+
+        `);
+      } else if (flowerType === 2) {
+        $(".pre-content").append(`<div class="pre-list-item">
+                                <div class="pre-types">
+                                  <p class="icon-hybrid">H</p>
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="pre-numbers">
+                                  <p class="grams">${grams}</p>
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
+                                </div>
+                              </div>
+
+        `);
+      } else if (flowerType === 3) {
+        $(".pre-content").append(`<div class="pre-list-item">
+                                <div class="pre-types">
+                                  <p class="icon-indica-hybrid">H</p>
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="pre-numbers">
+                                  <p class="grams">${grams}</p>
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
+                                </div>
+                              </div>
+
+        `);
+      } else {
+        $(".pre-content").append(`<div class="pre-list-item">
+                                <div class="pre-types">
+                                  <p class="icon-sativa-hybrid">H</p>
+                                  <p class="brand">${name}</p>
+                                </div>
+                                <div class="pre-numbers">
+                                  <p class="grams">${grams}</p>
+                                  <p class="thc">${thc}</p>
+                                  <p class="cbd">${cbd}</p>
+                                  <p class="price">${price}</p>
+                                </div>
+                              </div>
+
+        `);
+      }
       console.log(name + " thc: " + thc + " cbd: " + cbd + " grams: " + grams + " price: " + price)
     }
   }
