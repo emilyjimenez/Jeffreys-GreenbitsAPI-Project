@@ -131,4 +131,20 @@ getPrerollData(response, displayPrerollData, error) {
   });
 }
 
+toCurrency(price) {
+  let cash = price / 100;
+  let money = cash.toLocaleString('en-US',{style: 'currency', currency: 'USD'});
+  return money;
+}
+
+toPercent(input) {
+  if (input === null) {
+    input = "-"
+    return input;
+  } else {
+    let percent = input * 100;
+    return percent.toFixed(2) + "%";
+  }
+}
+
 }
