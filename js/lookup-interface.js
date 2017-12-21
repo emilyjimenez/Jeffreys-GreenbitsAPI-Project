@@ -237,6 +237,22 @@ let displayConcentrateData = function(response) {
     }
   }
 };
+//FOCUSE YOUR ATTENTION HERE! YOU ALMOST HAVE IT!
+let displayStrainNames = function(response) {
+  let strainNames = [];
+  console.log(response);
+  console.log("length: " + response.strains.length);
+  for (let i = 0; i < response.strains.length; i++) {
+    let index = response.strains[i];
+    let strainID = index.id;
+    let strainName = index.name;
+    console.log(strainID);
+    console.log(strainName);
+    strainNames.push([strainID, strainName]);
+    console.log(strainNames);
+  }
+  return strainNames;
+}
 
 let error = function(error) {
   alert("U FAIL");
@@ -253,9 +269,12 @@ $(document).ready(function() {
   });
   let prerollLookup = new Lookup();
   let prerollID = "01ccfc60-ab96-4614-bfb8-8dea907e96f0";
+  let strainLookup = new Lookup();
+  let response = "strains";
   $("#check-preroll").click(function() {
     // $("#buttons").hide();
     // $("#preroll-menu").show();
+    strainLookup.getStrainNames(response, displayStrainNames, error);
     prerollLookup.getPrerollData(prerollID, displayPrerollData, error);
   });
   let cartridgeLookup = new Lookup();

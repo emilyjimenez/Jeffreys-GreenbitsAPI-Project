@@ -25,50 +25,20 @@ export class Lookup {
     });
   }
   //Limiting concentrate menu to only display 60 prerolls per notes from client on downsizing menu, menu does not include 1 dollar joint deal, showing prerolls between 5 and 50 dollars
-    getPrerollData(response, displayPrerollData, error) {
-      let that = this;
-      $.ajax({
-        url: `https://api.greenbits.com/api/v1/products?limit=60&by_active=true&by_product_type=${response}&sort_by[field]=sell_price&sort_by[direction]=asc&by_sell_price[sell_price]=500,5000&by_sell_price[comparator]=between`,
-        headers: {
-          'Authorization': authorizationToken,
-        },
-        type: 'GET',
-        data: {
-          format: 'json'
-        },
-        success: function(response) {
-          let allPrerollStrains =[];
-          response.products.forEach(preroll => {
-            let foundStrain = that.getStrainName(preroll.strain_id);
-            let foundBrand = that.getBrandName(preroll.brand_id);
-            preroll.strain_name = foundStrain;
-            preroll.brand_name = foundBrand;
-            allPrerollStrains.push(preroll);
-          
-            console.log(allPrerollStrains);
-          });
-          displayPrerollData(allPrerollStrains);
-
-        },
-        error: function() {
-          alert('FAIL WHALE');
-        }
-      });
-    }
-
-    getStrainName(preroll) {
-      let x = $.ajax({
-        url: `https://api.greenbits.com/api/v1/strains/${preroll}`,
-        headers: {
-          'Authorization': authorizationToken,
-        },
-        type: 'GET',
-        data: {
-          format: 'json'
+  getPrerollData(response, displayPrerollData, error) {
+    $.ajax({
+      url: `https://api.greenbits.com/api/v1/products?limit=60&by_active=true&by_product_type=${response}&sort_by[field]=sell_price&sort_by[direction]=asc&by_sell_price[sell_price]=500,5000&by_sell_price[comparator]=between`,
+      headers: {
+        'Authorization': authorizationToken,
       },
-      success: function(preroll) {
-        let foundStrain = preroll.strain.name;
-        console.log(foundStrain);
+      type: 'GET',
+      data: {
+        format: 'json'
+      },
+      success: function(response) {
+
+      displayPrerollData(response);
+
       },
       error: function() {
         alert('FAIL WHALE');
@@ -76,17 +46,27 @@ export class Lookup {
     });
   }
 
+  getStrainNames(response, displayStrainNames, error) {
+    $.ajax({
+        url: `https://api.greenbits.com/api/v1/${response}/`,
+        headers: {
+          'Authorization': authorizationToken,
+        },
+        type: 'GET',
+        data: {
+          format: 'json'
+      },
+      success: function(response) {
+          displayStrainNames(response);
+      },
+      error: function() {
+        alert('fail whale');
+      }
+  });
+}
 
 
 
-
-
-    getBrandName(preroll) {
-      return "Papa";
-      // $.ajax({
-      //
-      // });
-    }
 
 
 //Limiting concentrate menu to only display 25 cartridges and 25 concentrates per notes from client on downsizing menu
