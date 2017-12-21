@@ -221,31 +221,29 @@ let displayConcentrateData = function(response) {
     }
   }
 };
-
-let displayStrainNames = function(response) {
-  let strainNames = [];
-  for (let i = 0; i < response.strains.length; i++) {
-    let index = response.strains[i];
-    let strainID = index.id;
-    let strainName = index.name;
-    strainNames.push([strainID, strainName]);
-  }
-  return strainNames;
-}
-
-let displayBrandNames = function(response) {
-  let brandNames = [];
-  for (let i = 0; i < response.brands.length; i++) {
-    let index = response.brands[i];
-    let brandID = index.id;
-    let brandName = index.name;
-    brandNames.push([brandID, brandName]);
-  }
-  return brandNames;
-}
+//intended for preroll data menu optimization but holding off
+// let displayStrainNames = function(response) {
+//   let strainNames = [];
+//   for (let i = 0; i < response.strains.length; i++) {
+//     let index = response.strains[i];
+//     let strainID = index.id;
+//     let strainName = index.name;
+//     strainNames.push([strainID, strainName]);
+//   }
+// }
+//
+// let displayBrandNames = function(response) {
+//   let brandNames = [];
+//   for (let i = 0; i < response.brands.length; i++) {
+//     let index = response.brands[i];
+//     let brandID = index.id;
+//     let brandName = index.name;
+//     brandNames.push([brandID, brandName]);
+//   }
+// }
 
 
-let displayPrerollData = function(response, strainNames, brandNames, error) {
+let displayPrerollData = function(response, error) {
   if (response.products.length > 0) {
     for (let i = 0; i < response.products.length; i++) {
       let index = response.products[i];
@@ -254,10 +252,8 @@ let displayPrerollData = function(response, strainNames, brandNames, error) {
       let thc = index.test_results_thc;
       let cbd = index.test_results_cbd;
       let price = index.sell_price;
-      let strain = index.strain_id;
-      let brand = index.brand_id;
-      console.log("this is the name: " + name)
-      console.log(strainNames);
+      let grams = index.value;
+      console.log(name + " thc: " + thc + " cbd: " + cbd + " grams: " + grams + " price: " + price)
     }
   }
 };
@@ -272,10 +268,10 @@ $(document).ready(function() {
   let flowerID = "87e148b0-c86f-4e8a-8089-0c5cd34dd3c1";
   let prerollLookup = new Lookup();
   let prerollID = "01ccfc60-ab96-4614-bfb8-8dea907e96f0";
-  let strainLookup = new Lookup();
-  let strains = "strains";
-  let brandLookup = new Lookup();
-  let brands = "brands";
+  // let strainLookup = new Lookup();
+  // let strains = "strains";
+  // let brandLookup = new Lookup();
+  // let brands = "brands";
   let cartridgeLookup = new Lookup();
   let cartridgeID = "81135415-1a22-4c85-b332-d9eea906633d";
   let concentrateLookup = new Lookup();
@@ -287,12 +283,9 @@ $(document).ready(function() {
     flowerLookup.getFlowerData(flowerID, displayFlowerData, error);
   });
 
-
   $("#check-preroll").click(function() {
     $("#buttons").hide();
     $("#preroll-menu").show();
-    var test = brandLookup.getBrandNames(brands, displayBrandNames);
-    strainLookup.getStrainNames(strains, displayStrainNames);
     prerollLookup.getPrerollData(prerollID, displayPrerollData, error);
   });
 
@@ -302,6 +295,7 @@ $(document).ready(function() {
     cartridgeLookup.getCartridgeData(cartridgeID, displayCartridgeData, error);
     concentrateLookup.getConcentrateData(concentrateID, displayConcentrateData, error);
   });
+
   $(".logo").click(function() {
     $("#flower-menu").hide();
     $(".content").empty();

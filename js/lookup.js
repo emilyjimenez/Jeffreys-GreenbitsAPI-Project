@@ -69,44 +69,44 @@ export class Lookup {
       }
     });
   }
-
-  getStrainNames(response, displayStrainNames, error) {
-    $.ajax({
-      url: `https://api.greenbits.com/api/v1/${response}/`,
-      headers: {
-        'Authorization': authorizationToken,
-      },
-      type: 'GET',
-      data: {
-        format: 'json'
-      },
-      success: function(response) {
-          displayStrainNames(response);
-      },
-      error: function() {
-        alert('fail whale');
-      }
-  });
-}
-
-getBrandNames(response, displayBrandNames, error) {
-  $.ajax({
-    url: `https://api.greenbits.com/api/v1/${response}/`,
-    headers: {
-      'Authorization': authorizationToken,
-    },
-    type: 'GET',
-    data: {
-      format: 'json'
-    },
-    success: function(response) {
-        displayBrandNames(response);
-    },
-    error: function() {
-      alert('fail whale');
-    }
-  });
-}
+//This was an effort to make the prerolls menu better formatted... still in the works...
+//   getStrainNames(response, displayStrainNames, error) {
+//     $.ajax({
+//       url: `https://api.greenbits.com/api/v1/${response}/`,
+//       headers: {
+//         'Authorization': authorizationToken,
+//       },
+//       type: 'GET',
+//       data: {
+//         format: 'json'
+//       },
+//       success: function(response) {
+//           displayStrainNames(response);
+//       },
+//       error: function() {
+//         alert('fail whale');
+//       }
+//   });
+// }
+//
+// getBrandNames(response, displayBrandNames, error) {
+//   $.ajax({
+//     url: `https://api.greenbits.com/api/v1/${response}/`,
+//     headers: {
+//       'Authorization': authorizationToken,
+//     },
+//     type: 'GET',
+//     data: {
+//       format: 'json'
+//     },
+//     success: function(response) {
+//         displayBrandNames(response);
+//     },
+//     error: function() {
+//       alert('fail whale');
+//     }
+//   });
+// }
 
 
 //Limiting concentrate menu to only display 60 prerolls per notes from client on downsizing menu, menu does not include 1 dollar joint deal, showing prerolls between 5 and 50 dollars
