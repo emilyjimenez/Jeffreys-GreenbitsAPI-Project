@@ -28,17 +28,14 @@
       font-family: 'Gotham Medium Italic';
       color: #d8d8d8;
     }
-    // width: 10px;
   }
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(1600px);
-    // right: 0;
+    transform: translateX(150%);
   }
   100% {
-    // left: 0;
-    transform: translateX(-80px);
+    transform: translateX(-150%);
   }
 }
