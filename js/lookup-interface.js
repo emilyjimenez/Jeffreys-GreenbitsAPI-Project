@@ -85,18 +85,19 @@ let displayFlowerData = function(response) {
 };
 
 let displayPrerollData = function(response) {
-  if (response.products.length > 0) {
-    for (let i = 0; i < response.products.length; i++) {
-      let index = response.products[i];
-      let name = index.name;
-      let flowerType = index.flower_type;
-      let thc = index.test_results_thc;
-      let cbd = index.test_results_cbd;
-      let price = index.sell_price;
-      let vendor = index.vendor;
-      console.log("name: " + name + " vendor: " + vendor + " price: " + price);
-    }
-  }
+  // if (response.length > 0) {
+  //   for (let i = 0; i < response.length; i++) {
+  //     let index = response[i];
+  //     let name = index.name;
+  //     let flowerType = index.flower_type;
+  //     let thc = index.test_results_thc;
+  //     let cbd = index.test_results_cbd;
+  //     let price = index.sell_price;
+  //     let vendor = index.vendor;
+  //     let brand = index.brand_name;
+  //     console.log("name: " + name + " brand: " + brand + " price: " + price);
+  //   }
+  // }
 };
 
 let displayCartridgeData = function(response) {
