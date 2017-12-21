@@ -43,17 +43,22 @@
 }
 
 .legend-indica {
-  @include icon($indica, 50px, 22px, 14px, $indica);
+  @include icon($indica, 60px, 25px, 16px, $indica);
+  box-shadow: 2px 2px 5px black;
 }
 .legend-sativa {
-  @include icon($sativa, 50px, 22px, 14px, $sativa);
+  @include icon($sativa, 60px, 25px, 16px, $sativa);
+  box-shadow: 2px 2px 5px black;
 }
 .legend-hybrid {
-  @include icon($hybrid, 50px, 22px, 14px, $hybrid);
+  @include icon($hybrid, 60px, 25px, 16px, $hybrid);
+  box-shadow: 2px 2px 5px black;
 }
 .legend-indica-hybrid {
-  @include icon($hybrid, 110px, 22px, 14px, $indica);
+  @include icon($hybrid, 120px, 25px, 16px, $indica);
+  box-shadow: 2px 2px 5px black;
 }
 .legend-sativa-hybrid {
-  @include icon($hybrid, 110px, 22px, 14px, $sativa);
+  @include icon($hybrid, 120px, 25px, 16px, $sativa);
+  box-shadow: 2px 2px 5px black;
 }

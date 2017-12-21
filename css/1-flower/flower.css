@@ -6,7 +6,7 @@
 .body {
   display: flex;
   flex-direction: column;
-  height: 850px;
+  height: 900px;
   width: 1800px;
   padding: 10px;
   margin-bottom: 10px; }
