@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'icon'.
-        on line 37 of scss/1-flower/header.scss, in `icon'
-        from line 37 of scss/1-flower/header.scss
+        on line 29 of scss/1-flower/header.scss, in `icon'
+        from line 29 of scss/1-flower/header.scss
 
-32:     width: 150px;
-33:     justify-content: space-around;
-34:   }
-35: }
-36: .icon-indica {
-37:   @include icon($indica, 20px, 12px, $indica);
-38: }
-39: .icon-sativa {
-40:   @include icon($sativa, 20px, 12px, $sativa);
-41: }
-42: .icon-hybrid {
+24:       text-transform: uppercase;
+25:     }
+26:   }
+27: }
+28: .icon-indica {
+29:   @include icon($indica, 20px, 20px, 12px, $indica);
+30: }
+31: .icon-sativa {
+32:   @include icon($sativa, 20px, 20px, 12px, $sativa);
+33: }
+34: .icon-hybrid {
 
 Backtrace:
-scss/1-flower/header.scss:37:in `icon'
-scss/1-flower/header.scss:37
+scss/1-flower/header.scss:29:in `icon'
+scss/1-flower/header.scss:29
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:98:in `block in with_mixin'
 /usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
@@ -73,4 +73,4 @@ scss/1-flower/header.scss:37
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'icon'.\A         on line 37 of scss/1-flower/header.scss, in `icon'\A         from line 37 of scss/1-flower/header.scss\A \A 32:     width: 150px;\A 33:     justify-content: space-around;\A 34:   }\A 35: }\A 36: .icon-indica {\A 37:   @include icon($indica, 20px, 12px, $indica);\A 38: }\A 39: .icon-sativa {\A 40:   @include icon($sativa, 20px, 12px, $sativa);\A 41: }\A 42: .icon-hybrid {"; }
+  content: "Error: Undefined mixin 'icon'.\A         on line 29 of scss/1-flower/header.scss, in `icon'\A         from line 29 of scss/1-flower/header.scss\A \A 24:       text-transform: uppercase;\A 25:     }\A 26:   }\A 27: }\A 28: .icon-indica {\A 29:   @include icon($indica, 20px, 20px, 12px, $indica);\A 30: }\A 31: .icon-sativa {\A 32:   @include icon($sativa, 20px, 20px, 12px, $sativa);\A 33: }\A 34: .icon-hybrid {"; }

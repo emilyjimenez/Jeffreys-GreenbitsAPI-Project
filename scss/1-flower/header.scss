@@ -10,7 +10,6 @@
     height: 100%;
     #circle-logo {
       width: 200px;
-      filter: invert(100%);
       margin-top: 10px;
     }
     &:hover {
@@ -25,26 +24,40 @@
       text-transform: uppercase;
     }
   }
-  .legend {
-    background-color: rgba(255,255,255,0.5);
-    padding: 5px;
-    display: flex;
-    width: 150px;
-    justify-content: space-around;
-  }
 }
 .icon-indica {
-  @include icon($indica, 20px, 12px, $indica);
+  @include icon($indica, 20px, 20px, 12px, $indica);
 }
 .icon-sativa {
-  @include icon($sativa, 20px, 12px, $sativa);
+  @include icon($sativa, 20px, 20px, 12px, $sativa);
 }
 .icon-hybrid {
-  @include icon($hybrid, 20px, 12px, $hybrid);
+  @include icon($hybrid, 20px, 20px, 12px, $hybrid);
 }
 .icon-indica-hybrid {
-  @include icon($hybrid, 20px, 12px, $indica);
+  @include icon($hybrid, 20px, 20px, 12px, $indica);
 }
 .icon-sativa-hybrid {
-  @include icon($hybrid, 20px, 12px, $sativa);
+  @include icon($hybrid, 20px, 20px, 12px, $sativa);
+}
+
+.legend-indica {
+  @include icon($indica, 60px, 25px, 16px, $indica);
+  box-shadow: 2px 2px 5px black;
+}
+.legend-sativa {
+  @include icon($sativa, 60px, 25px, 16px, $sativa);
+  box-shadow: 2px 2px 5px black;
+}
+.legend-hybrid {
+  @include icon($hybrid, 60px, 25px, 16px, $hybrid);
+  box-shadow: 2px 2px 5px black;
+}
+.legend-indica-hybrid {
+  @include icon($hybrid, 120px, 25px, 16px, $indica);
+  box-shadow: 2px 2px 5px black;
+}
+.legend-sativa-hybrid {
+  @include icon($hybrid, 120px, 25px, 16px, $sativa);
+  box-shadow: 2px 2px 5px black;
 }

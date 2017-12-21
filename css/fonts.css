@@ -7,5 +7,11 @@
 @font-face {
   font-family: 'Gotham Medium';
   src: url("../fonts/Gotham-Medium.otf") format("opentype"); }
+@font-face {
+  font-family: 'Gotham Black Italic';
+  src: url("../fonts/Gotham-BlackIta.otf") format("opentype"); }
+@font-face {
+  font-family: 'Gotham Medium Italic';
+  src: url("../fonts/Gotham-MediumIta.otf") format("opentype"); }
 
 /*# sourceMappingURL=fonts.css.map */

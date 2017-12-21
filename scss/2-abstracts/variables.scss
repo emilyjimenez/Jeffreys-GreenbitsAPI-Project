@@ -4,11 +4,11 @@ $indica: #6c345d;
 $yellow: #fbda61;
 $sativa-hybrid: linear-gradient(to bottom right, $sativa, $hybrid);
 
-@mixin icon($color, $size, $font-size, $color2) {
+@mixin icon($color, $width, $height, $font-size, $color2) {
   background: $color;
   color: white;
-  width: $size;
-  height: $size;
+  width: $width;
+  height: $height;
   display: flex;
   justify-content: center;
   align-items: center;
