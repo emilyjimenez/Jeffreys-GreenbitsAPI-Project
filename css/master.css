@@ -95,7 +95,7 @@
   border: 2px solid #d1482f; }
 
 .icon-null {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   color: white;
   width: 20px;
   height: 20px;
@@ -104,7 +104,7 @@
   align-items: center;
   font-family: 'Gotham Black';
   font-size: 12px;
-  border: 2px solid transparent; }
+  border: 2px solid rgba(0, 0, 0, 0); }
 
 .legend-indica {
   background: #6c345d;
@@ -339,9 +339,9 @@
 
 @keyframes marquee {
   0% {
-    transform: translateX(1600px); }
+    transform: translateX(150%); }
   100% {
-    transform: translateX(-80px); } }
+    transform: translateX(-150%); } }
 .content-header {
   display: flex;
   justify-content: space-around;
