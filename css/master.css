@@ -87,7 +87,6 @@
     height: 100%; }
     .header .logo #circle-logo {
       width: 200px;
-      filter: invert(100%);
       margin-top: 10px; }
     .header .logo:hover {
       transform: scale(1.05); }
