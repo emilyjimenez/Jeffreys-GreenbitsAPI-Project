@@ -55,7 +55,7 @@ _If you press flower menu, then reload, and press concentrate menu the menu will
 * [Greenbits API v 1](https://developer.greenbits.com/v1/)
 * [Postman](https://www.getpostman.com/)
 
-### License
+## License
 
 _**Jeffrey's TV Menu Display - Greenbits API Project** is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License (CC BY-NC-SA) (as of 12/21/2017). For more information on this license, please checkout [creativecommons.org](https://creativecommons.org/licenses/by-nc-sa/4.0/)._
 
