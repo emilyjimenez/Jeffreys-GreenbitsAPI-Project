@@ -1,4 +1,4 @@
-# _Jeffrey's TV Menu Display- Greenbits API Project_
+# _Jeffrey's TV Menu Display - Greenbits API Project_
 
 ## _Epicodus JavaScript Group Project_
 
@@ -20,7 +20,10 @@ _Web app for TV display(1920x1080) to show Jeffrey's Flower and Oil dispensary m
 
 ## Further Exploration
 
-Name check character length method for long names that mess with tables in menu
+* Name check character length method for long names that mess with tables in menu
+* Carouselling option for when product list goes over 60+ line items
+* Edibles/Topicals menu
+* Preroll menu rework for items that are come in different quantity amounts (ie: 2 pk, 3 pk, 5 pk, and .5 g vs 1 g amounts)
 
 
 ## Setup/Installation Requirements
@@ -29,7 +32,7 @@ Name check character length method for long names that mess with tables in menu
 
 2. _Install [node.js](https://nodejs.org/en/) if you do not have it installed._
 
-3. _To run the application and view in your preferred browser of choice, run the following commands once you're in the project directory in the terminal. 'npm install', 'bower install', 'gulp build', and 'gulp serve'. **note** Project will not build if you do not have a .env file set up with an API token. API tokens are available for those who use the Greenbits POS software._
+3. _To run the application and view in your preferred browser of choice, run the following commands once you're in the project directory in the terminal. 'npm install', 'bower install', 'gulp build', and 'gulp serve'. **note** Project will not build if you do not have a .env file set up with an API token. API tokens are available only to those who use the Greenbits POS software._
 
 ## Known Bugs
 
@@ -53,7 +56,7 @@ _If you press flower menu, then reload, and press concentrate menu the menu will
 
 ### License
 
-_License TBD_
+_**Jeffrey's TV Menu Display - Greenbits API Project** is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License (CC BY-NC-SA) (as of 12/21/2017). For more information on this license, please checkout [creativecommons.org](https://creativecommons.org/licenses/by-nc-sa/4.0/)._
 
 _Copyright (c) 2017 Emily Wells Jimenez (EWJ Consulting), Brandon Kudo, and Chris Turina_
 
