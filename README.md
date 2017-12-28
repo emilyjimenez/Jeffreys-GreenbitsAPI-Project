@@ -24,6 +24,7 @@ _Web app for TV display(1920x1080) to show Jeffrey's Flower and Oil dispensary m
 * Carouselling option for when product list goes over 60+ line items
 * Edibles/Topicals menu
 * Preroll menu rework for items that are come in different quantity amounts (ie: 2 pk, 3 pk, 5 pk, and .5 g vs 1 g amounts)
+* Rewrite program in Angular 2
 
 
 ## Setup/Installation Requirements
@@ -51,7 +52,7 @@ _If you press flower menu, then reload, and press concentrate menu the menu will
     * Bower
     * Babel
 * Google Chrome
-* [Green API v 1](https://developer.greenbits.com/v1/)
+* [Greenbits API v 1](https://developer.greenbits.com/v1/)
 * [Postman](https://www.getpostman.com/)
 
 ### License
