@@ -13,11 +13,12 @@ let displayFlowerData = function(response) {
       let money = newLookup.toCurrency(price);
       let thcPercent = newLookup.toPercent(thc);
       let cbdPercent = newLookup.toPercent(cbd);
+      let formattedName = newLookup.formatLongEntry(name);
       if (flowerType === 0) {
         $(".content").append(`<div class="list-item">
                                 <div class="types">
                                   <p class="icon-indica">I</p>
-                                  <p class="brand">${name}</p>
+                                  <p class="brand">${formattedName}</p>
                                 </div>
                                 <div class="numbers">
                                   <p class="thc">${thcPercent}</p>
@@ -31,7 +32,7 @@ let displayFlowerData = function(response) {
         $(".content").append(`<div class="list-item">
                                 <div class="types">
                                   <p class="icon-sativa">S</p>
-                                  <p class="brand">${name}</p>
+                                  <p class="brand">${formattedName}</p>
                                 </div>
                                 <div class="numbers">
                                   <p class="thc">${thcPercent}</p>
@@ -45,7 +46,7 @@ let displayFlowerData = function(response) {
         $(".content").append(`<div class="list-item">
                                 <div class="types">
                                   <p class="icon-hybrid">H</p>
-                                  <p class="brand">${name}</p>
+                                  <p class="brand">${formattedName}</p>
                                 </div>
                                 <div class="numbers">
                                   <p class="thc">${thcPercent}</p>
@@ -59,7 +60,7 @@ let displayFlowerData = function(response) {
         $(".content").append(`<div class="list-item">
                                 <div class="types">
                                   <p class="icon-indica-hybrid">H</p>
-                                  <p class="brand">${name}</p>
+                                  <p class="brand">${formattedName}</p>
                                 </div>
                                 <div class="numbers">
                                   <p class="thc">${thcPercent}</p>
@@ -73,7 +74,7 @@ let displayFlowerData = function(response) {
         $(".content").append(`<div class="list-item">
                                 <div class="types">
                                   <p class="icon-sativa-hybrid">H</p>
-                                  <p class="brand">${name}</p>
+                                  <p class="brand">${formattedName}</p>
                                 </div>
                                 <div class="numbers">
                                   <p class="thc">${thcPercent}</p>
@@ -87,7 +88,7 @@ let displayFlowerData = function(response) {
         $(".content").append(`<div class="list-item">
                                 <div class="types">
                                   <p class="icon-null"></p>
-                                  <p class="brand">${name}</p>
+                                  <p class="brand">${formattedName}</p>
                                 </div>
                                 <div class="numbers">
                                   <p class="thc">${thcPercent}</p>
@@ -730,7 +731,6 @@ let displayPrerollData = function(response, error) {
 
         `);
       }
-      console.log(name + " thc: " + thc + " cbd: " + cbd + " grams: " + grams + " price: " + price)
     }
   }
 };
