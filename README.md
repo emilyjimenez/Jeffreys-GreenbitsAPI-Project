@@ -63,4 +63,4 @@ _Copyright (c) 2017 Emily Wells Jimenez (EWJ Consulting), Brandon Kudo, and Chri
 
 ## Contact Details
 
-_Interested in this product? Email emily@jeffreysjoint.com, brandonkudo@gmail.com, or chris.turina@gmail.com for more information._
+_Interested in this product? Email emwellspdx@gmail.com, brandonkudo@gmail.com, or chris.turina@gmail.com for more information._
