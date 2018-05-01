@@ -35,6 +35,9 @@ _Web app for TV display(1920x1080) to show Jeffrey's Flower and Oil dispensary m
 
 3. _To run the application and view in your preferred browser of choice, run the following commands once you're in the project directory in the terminal. 'npm install', 'bower install', 'gulp build', and 'gulp serve'. **note** Project will not build if you do not have a .env file set up with an API token. API tokens are available only to those who use the Greenbits POS software._
 
+**[UPDATE 5/1/18]**
+4. _After demoing this product to prospective dispensaries it's come to my attention that this menu will not work unless you change the product IDs in the lookup-interface.js file. You will need to use postman to query your product IDs and then change the flowerID, prerollID, concentrateID, and cartridgeID variables located below line 743. Product IDs are unique and vary for each dispensary._
+
 ## Known Bugs
 
 _If you press flower menu, then reload, and press concentrate menu the menu will load concentrates (wax shatter live resin) in the first column and then cartridges in the second column… should be vice versa. Work around is to hard reload the page if this happens._
